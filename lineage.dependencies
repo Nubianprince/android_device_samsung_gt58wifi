@@ -1,6 +1,2 @@
 [
-  {
-    "repository": "android_device_samsung_gte-common",
-    "target_path": "device/samsung/gte-common"
-  }
 ]
