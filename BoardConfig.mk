@@ -17,21 +17,4 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
 
-# RIL
-BOARD_PROVIDES_LIBRIL := false
-
-# Low Latency
-AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
-
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    $(LOCAL_PATH)/sepolicy
-    
-    
-# Build system
-#USE_NINJA := false
-#ANDROID_COMPILE_WITH_JACK := false
-
-##################### ADDITIONS ######################################################
 

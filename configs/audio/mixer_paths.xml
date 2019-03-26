@@ -1564,7 +1564,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-comm">
         <path name="sub-mic" />
@@ -1588,7 +1588,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-others">
         <path name="sub-mic" />
@@ -1612,7 +1612,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-chaton">
         <path name="sub-mic" />
@@ -1636,7 +1636,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-callforwarding">
         <path name="sub-mic" />
@@ -1660,7 +1660,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-webex">
         <path name="sub-mic" />
@@ -1684,7 +1684,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-carrier">
         <path name="sub-mic" />
@@ -1708,7 +1708,7 @@
         <path name="sub-mic" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC3 Volume" value="4" />
-    </path>
+	</path>
 
     <path name="voip-sub-mic-nonpcm">
         <path name="sub-mic" />
