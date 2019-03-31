@@ -33,7 +33,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.radio.noril=1 \
     ro.config.low_ram=false \
     ro.config.zram=false \
-    ro.sf.lcd_density=160 \
+    ro.sf.lcd_density=200 \
     telephony.lteOnCdmaDevice=0
+    
+    
+BUILD_FINGERPRINT=samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ1:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+  TARGET_DEVICE=gt58wifi \
+  PRODUCT_NAME=gt58wifixx \
+  PRIVATE_BUILD_DESC="gt58wifixx-user 7.1.1 NMF26X T350XXU1CQJ1 release-keys"
 
 
