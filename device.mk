@@ -7,6 +7,10 @@ $(call inherit-product, device/samsung/gte-common/device-common.mk)
 LOCAL_PATH := device/samsung/gt58wifi
 CONFIG_PATH := hardware/qcom/audio-caf/msm8916/configs
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/mixer_paths.xml
+    
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db \
@@ -18,14 +22,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:system/etc/B05QF_sr544_module_info.xml \
     $(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:system/etc/C05QF_sr544_module_info.xml
     
-    
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/mixer_paths.xml
-
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
+    
 # Device specific properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
@@ -38,6 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
     
 BUILD_FINGERPRINT=samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ1:user/release-keys
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
   TARGET_DEVICE=gt58wifi \
   PRODUCT_NAME=gt58wifixx \
