@@ -24,10 +24,6 @@ PRODUCT_COPY_FILES += \
     
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
-
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
     
 # Device specific properties
 PRODUCT_PROPERTY_OVERRIDES += \
