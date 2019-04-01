@@ -24,6 +24,10 @@ PRODUCT_COPY_FILES += \
     
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
+
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
     
 # Device specific properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -35,21 +39,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=200 \
     telephony.lteOnCdmaDevice=0
     
+
 # Better Internet Speed
 PRODUCT_PROPERTY_OVERRIDES += \
-    net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960 \
-    net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960 \
-    net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960 \
-    net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960 \
-    net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960 \
-    net.rmnet0.dns1=8.8.8.8 \
-    net.rmnet0.dns2=8.8.4.4 \
-    net.dns1=8.8.8.8 \
-    net.dns2=8.8.4.4
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960 \
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960 \
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960 \
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960 \
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960 \
+net.rmnet0.dns1=8.8.8.8 \
+net.rmnet0.dns2=8.8.4.4 \
+net.dns1=8.8.8.8 \
+net.dns2=8.8.4.4
 
 # Quick Power On
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.hw_quickpoweron=true
+ro.config.hw_quickpoweron=true
 
 BUILD_FINGERPRINT=samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ1:user/release-keys
 
