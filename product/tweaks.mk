@@ -7,10 +7,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.zram=false \
 	ro.sf.lcd_density=200 \
 	telephony.lteOnCdmaDevice=0
-    
-# Memory optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Better Internet Speed
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -23,6 +19,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	net.rmnet0.dns2=8.8.4.4 \
 	net.dns1=8.8.8.8 \
 	net.dns2=8.8.4.4
+
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Quick Power On
 PRODUCT_PROPERTY_OVERRIDES += \
