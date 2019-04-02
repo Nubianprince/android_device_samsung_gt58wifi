@@ -5,7 +5,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.radio.noril=1 \
 	ro.config.low_ram=false \
 	ro.config.zram=false \
-	ro.sf.lcd_density=200 \
+	ro.sf.lcd_density=160 \
 	telephony.lteOnCdmaDevice=0
 
 # Better Internet Speed
