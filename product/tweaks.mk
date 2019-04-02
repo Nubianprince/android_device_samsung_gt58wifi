@@ -8,7 +8,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=200 \
 	telephony.lteOnCdmaDevice=0
     
-
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Better Internet Speed
 PRODUCT_PROPERTY_OVERRIDES += \
