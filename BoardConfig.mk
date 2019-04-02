@@ -3,6 +3,9 @@ include device/samsung/gte-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/samsung/gt58wifi
 
+# Include board config fragments
+include device/samsung/gt58wifi/board/*.mk
+
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := gt58wifi,gt58wifixx,SM-T350
 
@@ -17,5 +20,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
 
+# Ramdisk
+BOARD_ROOT_EXTRA_FOLDERS := dsp efs firmware firmware-modem persist
+BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
+
+#TWRP
 RECOVERY_VARIANT := twrp
 
