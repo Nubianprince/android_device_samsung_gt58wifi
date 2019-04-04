@@ -58,3 +58,7 @@ net.ipv4.tcp_timestamps=1 \
 net.ipv4.tcp_window_scaling=1 \
 net.ipv4.tcp_wmem=4096 39000 18700 \
 wifi.supplicant_scan_interval=180
+
+#Test
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.audio.dirac.speaker false
