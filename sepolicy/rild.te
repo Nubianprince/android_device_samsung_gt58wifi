@@ -1,0 +1,5 @@
+allow rild system_data_file:sock_file create_file_perms;
+allow rild radio_data_file:file { getattr lock };
+allow rild proc:file { open read };
+allow rild device:chr_file { read write };
+

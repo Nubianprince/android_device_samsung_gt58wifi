@@ -14,16 +14,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960 \
 	net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960 \
 	net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960 \
-	net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960 
+	net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
 
 # DNS	
-PRODUCT_PROPERTY_OVERRIDES += \	
+PRODUCT_PROPERTY_OVERRIDES += \
 	net.rmnet0.dns1=8.8.8.8 \
 	net.rmnet0.dns2=8.8.4.4 \
 	net.dns1=8.8.8.8 \
 	net.dns2=8.8.4.4
 
-	# Fast Reboot
+# Fast Reboot
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.purgeable_assets=1
 

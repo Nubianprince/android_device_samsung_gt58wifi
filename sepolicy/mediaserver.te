@@ -1,0 +1,23 @@
+allow mediaserver audio_device:chr_file rw_file_perms;
+allow mediaserver system_file:file execmod; # for libmmjpeg
+allow mediaserver sysfs_wake_lock:file { open read write };
+allow mediaserver system_data_file:sock_file write;
+allow mediaserver mpctl_socket:dir search;
+unix_socket_connect(mediaserver, mpctl, perfd)
+unix_socket_connect(mediaserver, thermal, thermal-engine)
+unix_socket_connect(mediaserver, sensors, sensors)
+
+allow mediaserver default_android_service:service_manager add;
+allow mediaserver device:dir { open read };
+allow mediaserver firmware_file:dir search;
+
+allow mediaserver hal_camera_hwservice:hwservice_manager find;
+
+allow mediaserver cameraserver_service:service_manager add;
+
+allow mediaserver cameraproxy_service:service_manager find;
+
+allow mediaserver sysfs:file read;
+
+allow mediaserver serialno_prop:file { open read getattr };
+allow mediaserver sysfs:file { open getattr };

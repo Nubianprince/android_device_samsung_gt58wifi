@@ -1,0 +1,24 @@
+#============= toolbox ==============
+allow toolbox init:fifo_file { getattr read write };
+allow toolbox radio_data_file:dir { getattr read search };
+allow toolbox rmnet_mux_prop:file { getattr open read };
+allow toolbox self:capability dac_override;
+allow toolbox proc_meminfo:file { open read };
+allow toolbox radio_data_file:dir { open setattr };
+allow toolbox sysfs_lowmemorykiller:dir search;
+allow toolbox radio_data_file:dir { add_name create remove_name rmdir write };
+allow toolbox radio_data_file:file getattr;
+allow toolbox radio_data_file:lnk_file { getattr read setattr };
+allow toolbox self:capability { chown fowner fsetid };
+allow toolbox sysfs_lowmemorykiller:file { open read };
+allow toolbox file_contexts_file:file { getattr open read };
+allow toolbox init:unix_stream_socket connectto;
+allow toolbox property_socket:sock_file write;
+allow toolbox freq_prop:property_service set;
+allow toolbox perfd_prop:property_service set;
+allow toolbox sysfs:file { getattr setattr };
+allow toolbox default_prop:property_service set;
+allow toolbox system_prop:property_service set;
+allow toolbox vfat:dir search;
+
+

@@ -1,0 +1,17 @@
+#fsg
+type fsg_file, fs_type, contextmount_type;
+
+# grep
+type grep_exec, exec_type, file_type;
+
+# Touch script
+type sysfs_mmi_touch, fs_type, sysfs_type;
+
+type app_efs_file, file_type;
+type imei_efs_file, file_type;
+type rfs_debugfs_file, file_type;
+type sensors_efs_file, file_type;
+type snd_data_file, file_type, data_file_type;
+type touchpanel_sysfs, fs_type, sysfs_type;
+type bt_fw_file, file_type;
+type wifi_efs_file, file_type;

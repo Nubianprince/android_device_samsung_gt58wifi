@@ -1,0 +1,119 @@
+# This really is necessary for init.qcom.rc to manually restorecon the
+# /data/data/com.android.providers.telephony/(databases|shared_prefs)
+# symlinks. Without the manual restorecon, we would have to allow rild
+# to read any system_data_file:lnk_file.
+selinux_check_context(init)
+
+allow init {
+    sysfs_sensors
+}:lnk_file read;
+
+allow init {
+    sysfs_audio
+    sysfs_batteryinfo
+    sysfs_bluetooth_writable
+    sysfs_graphics
+    sysfs_sensors
+}:file setattr;
+
+allow init {
+    sysfs_cpu_boost
+    sysfs_devices_system_cpu
+    sysfs_lowmemorykiller
+    sysfs_thermal
+}:file w_file_perms;
+
+allow init debugfs:file write;
+allow init efs_file:dir mounton;
+
+#============= init ==============
+allow init debugfs:dir mounton;
+allow init debugfs_tracing:file { rw_file_perms };
+allow init debugfs_rmt:file write;
+allow init diag_exec:file { read open getattr execute };
+allow init efs_file:dir { mounton };
+allow init init:socket { read write create ioctl };
+allow init mpctl_data_file:file { append write };
+allow init mpctl_socket:sock_file { write };
+allow init qmuxd_socket:sock_file { write };
+allow init qmuxd:unix_stream_socket { connectto };
+allow init rootfs:dir { relabelfrom };
+allow init self:process execmem;
+allow init smem_log_device:chr_file { ioctl write };
+allow init sysfs_mpdecision:file { getattr };
+allow init thermal_device:chr_file { ioctl write };
+allow init vfat:dir search;
+allow init wcnss_device:chr_file { write };
+allow init shell_exec:file execute_no_trans;
+allow init sysfs:file { setattr write open };
+allow init sysfs_boot_adsp:file setattr;
+allow init sysfs_fm:file setattr;
+allow init sysfs_graphics:file setattr;
+allow init system_file:file execute_no_trans;
+allow init gpu_device:chr_file { ioctl write };
+allow init ion_device:chr_file ioctl;
+allow init proc:file { open write };
+allow init radio_data_file:lnk_file read;
+allow init rtc_device:chr_file ioctl;
+allow init self:capability2 block_suspend;
+allow init sysfs_msm_power:file { open write };
+allow init sysfs_process_reclaim:file { open write };
+allow init sysfs_socinfo:file write;
+allow init sysfs_wlan_fwpath:file setattr;
+allow init sysfs_kgsl:file setattr;
+allow init sysfs_uio:lnk_file read;
+allow init sysfs_uio_file:file { open read };
+allow init sysfs_usb_uicc:file setattr;
+allow init sysfs_wake_lock:file { append open };
+allow init uio_device:chr_file write;
+allow init video_device:chr_file { ioctl write };
+allow init modem_efs_partition_device:blk_file write;
+allow init self:socket bind;
+allow init diag_device:chr_file write;
+allow init mediaserver:fd use;
+
+
+
+
+allow init firmware_file:dir mounton;
+allow init fsg_file:dir mounton;
+allow init pstorefs:dir mounton;
+allow init system_file:file mounton;
+
+allow init cameraserver:fd use;
+allow init gpu_device:chr_file write;
+allow init ion_device:chr_file write;
+allow init self:socket { read write };
+allow init self:udp_socket ioctl;
+allow init video_device:chr_file { ioctl write };
+
+allow init proc:file { getattr open read setattr write };
+allow init sysfs:file { open setattr write };
+
+allow init sysfs_leds:lnk_file read;
+
+allow init sysfs_graphics:file setattr;
+
+allow init system_file:file execute_no_trans;
+allow init vendor_file:file execute_no_trans;
+allow init vendor_file:lnk_file { create };
+
+allow init hwservicemanager:binder { call transfer };
+
+allow init hal_power_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init default_android_hwservice:hwservice_manager add;
+allow init hal_usb_hwservice:hwservice_manager add;
+allow init system_server:binder call;
+allow init sysfs:file read;
+
+allow init hal_health_hwservice:hwservice_manager add;
+
+allow init sysfs_mmc_host:file read;
+dontaudit init sysfs_mmc_host:file open;
+
+allow init self:netlink_kobject_uevent_socket { read create setopt bind };
+
+allow init hal_lineage_power_hwservice:hwservice_manager add;
+
+
