@@ -24,6 +24,4 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
 BOARD_ROOT_EXTRA_FOLDERS := dsp efs firmware firmware-modem persist
 BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 
-#TWRP
-RECOVERY_VARIANT := twrp
 
