@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/samsung/gt510wifi
+VENDOR_PATH := device/samsung/gt58wifi
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
