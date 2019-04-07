@@ -1,1 +1,1 @@
-allow netd sysfs:file { open write };
+allow netd firmware_file:dir { search };
