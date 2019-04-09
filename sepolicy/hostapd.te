@@ -1,2 +1,0 @@
-#============= hostapd ==============
-allow hostapd wlan_device:chr_file r_file_perms;
