@@ -1,66 +1,43 @@
-# Samsung Package Version T550XXU1CQL5_T550OJV1CQK3_TUR (unless otherwise specified and/or tagged)
+# Samsung Package Version T350XXU1CQJ5_T350XAC1CQJ5_XAC (unless otherwise specified and/or tagged)
 
 # ACDBs
-etc/Bluetooth_cal.acdb
-etc/General_cal.acdb
-etc/Global_cal.acdb
-etc/Handset_cal.acdb
-etc/Hdmi_cal.acdb
-etc/Headset_cal.acdb
-etc/Speaker_cal.acdb
+etc/Bluetooth_cal.acdb:vendor/etc/Bluetooth_cal.acdb
+etc/General_cal.acdb:vendor/etc/General_cal.acdb
+etc/Global_cal.acdb:vendor/etc/Global_cal.acdb
+etc/Handset_cal.acdb:vendor/etc/Handset_cal.acdb
+etc/Hdmi_cal.acdb:vendor/etc/Hdmi_cal.acdb
+etc/Headset_cal.acdb:vendor/etc/Headset_cal.acdb
+etc/Speaker_cal.acdb:vendor/etc/Speaker_cal.acdb
 
 # Audio
-lib/hw/audio.primary.msm8916.so
-lib/libaudio-resampler.so
-lib/libaudioroute.so
-lib/libaudio_soundtrigger.so
-lib/libfloatingfeature.so
-lib/libsamsungearcare.so
-lib/libsamsungeffect.so
-lib/libSamsungPkcs11Wrapper.so
-lib/libSamsungPostProcess.so
-lib/libsamsungpowersound.so
-lib/libSamsungPreProcess.so
-lib/libsamsungRecord.so
-lib/libsamsungSoundbooster_ext.so
-lib/libsamsungSoundbooster_pgb.so
-lib/libsamsungVoipResampler.so
-lib/libsecaudioinfo.so
-lib/libSoundAlive_VSP_ver315b_arm.so
-lib/libtinyalsa.so
-lib/libtinycompress.so
-lib/lib_DNSe_EP_ver216c.so
-lib/lib_PreGainBooster_ver105.so
-lib/lib_SamsungRec_V04013.so
-lib/lib_SamsungVAD_v01009.so
-lib/lib_soundaliveresampler.so
-lib/lib_SoundAlive_3DPosition_ver202.so
-lib/lib_SoundAlive_play_plus_ver127a.so
-lib/lib_SoundAlive_SRC384_ver300.so
-lib/lib_SoundBooster_ver610.so
-lib/soundfx/libaudiosaplus_sec.so
-lib/libtfa9895.so
+etc/Tfa9895.cnt:vendor/etc/Tfa9895.cnt
+lib/hw/audio.primary.msm8916.so:vendor/lib/hw/audio.primary.msm8916.so
+lib/libaudio_soundtrigger.so:vendor/lib/libaudio_soundtrigger.so
+lib/libSamsungPreProcess.so:vendor/lib/libSamsungPreProcess.so
+lib/libSamsungPostProcess.so:vendor/lib/libSamsungPostProcess.so
+lib/libsamsungVoipResampler.so:vendor/lib/libsamsungVoipResampler.so
+lib/libsamsungRecord.so:vendor/lib/libsamsungRecord.so
+lib/libsamsungSoundbooster_ext.so:vendor/lib/libsamsungSoundbooster_ext.so
+lib/lib_soundaliveresampler.so:vendor/lib/lib_soundaliveresampler.so
+lib/lib_SamsungRec_V04013.so:vendor/lib/lib_SamsungRec_V04013.so
+lib/libsecaudioinfo.so:vendor/lib/libsecaudioinfo.so
+lib/lib_SoundBooster_ver610.so:vendor/lib/lib_SoundBooster_ver610.so
+lib/lib_SoundAlive_SRC384_ver300.so:vendor/lib/lib_SoundAlive_SRC384_ver300.so
+lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
+lib/libtfa9895.so:vendor/lib/libtfa9895.so|b217980c2206ff4053b2332a9bffd21f0df7efd9
 
 # Camera
-lib/hw/camera.vendor.msm8916.so
-lib/libaec_algo_front.so
-lib/libaec_algo_rear.so
-lib/libaf_algo_rear.so
-lib/libAl_Awb.so
-lib/libAl_Awb_Sp.so
-lib/libarcsoft_bestphoto_select.so
-lib/libarcsoft_panorama_burstcapture.so
-lib/libarcsoft_selfie_camera_lite.so
-lib/libawb_algo_front.so
-lib/libawb_algo_rear_al.so
-lib/libcamera_metadata.so
-lib/libcodecsolution.so
-lib/libjpeg.so
-lib/libmmcamera2_stats_algorithm.so
-lib/libmmcamera_cac2_lib_13M.so
-lib/libmmcamera_wavelet_lib.so
-lib/libarcsoft_panorama_burstcapture.so
-lib/libarcsoft_selfie_camera_lite.so
+lib/hw/camera.msm8916.so:vendor/lib/hw/camera.vendor.msm8916.so
+lib/libaec_algo_front.so:vendor/lib/libaec_algo_front.so
+lib/libaec_algo_rear.so:vendor/lib/libaec_algo_front.so
+lib/libaf_algo_rear.so:vendor/lib/libaec_algo_front.so
+lib/libAl_Awb.so:vendor/lib/libAl_Awb.so
+lib/libAl_Awb_Sp.so:vendor/lib/libAl_Awb_Sp.so
+lib/libawb_algo_front.so:vendor/lib/libawb_algo_front.so
+lib/libawb_algo_rear_al.so:vendor/lib/libawb_algo_rear_al.so
+lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so
+lib/libmmcamera_cac2_lib_13M.so:vendor/lib/libmmcamera_cac2_lib_13M.so
+lib/libmmcamera_wavelet_lib.so:vendor/lib/libmmcamera_wavelet_lib.so
 vendor/lib/libactuator_dw9804_rossa_camcorder.so
 vendor/lib/libactuator_dw9804_rossa_camera.so
 vendor/lib/libchromatix_sr544_common.so
@@ -98,28 +75,25 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegenc.so
-vendor/lib/libQjpeg.so
-# Ril (Used by audio hal)
-lib/libreference-ril.so
-lib/libril.so
-lib/librilutils.so
+
+# DRM
+bin/qseecomd:vendor/bin/qseecomd
+vendor/lib/libQSEEComAPI.so
 
 # Qualcomm framework
-lib/lib-sec-disp.so
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqmi.so
-vendor/lib/libqmiservices.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 
 # Sensors
-lib/hw/sensors.msm8916.so
-lib/hw/sensors.vendor.msm8916.so
+lib/hw/sensors.msm8916.so:vendor/lib/hw/sensors.vendor.msm8916.so
