@@ -9,27 +9,19 @@ include device/samsung/gt58wifi/board/*.mk
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := gt58wifi,gt58wifixx,SM-T350
 
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /vendor/lib/hw/audio.primary.msm8916.so=25 \
+    /vendor/lib/hw/camera.vendor.msm8916.so=25 \
+    /vendor/lib/hw/sensors.vendor.msm8916.so=25
+	
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
-
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-
-# Enable QCOM FM feature
-TARGET_QCOM_NO_FM_FIRMWARE := true
-AUDIO_FEATURE_ENABLED_FM := true
-
-# Low Latency
-AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
-
 # Partition sizes
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
-
-# Ramdisk
-BOARD_ROOT_EXTRA_FOLDERS := dsp efs firmware firmware-modem persist
-BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 
 
