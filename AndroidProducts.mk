@@ -10,4 +10,4 @@
 #
   
 PRODUCT_MAKEFILES := \
-  $(LOCAL_DIR)/lineage_gt58wifi.mk 
+  $(LOCAL_DIR)/crdroid_gt58wifi.mk 
