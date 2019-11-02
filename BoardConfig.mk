@@ -20,10 +20,6 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-# Ramdisk
-BOARD_ROOT_EXTRA_FOLDERS := dsp efs firmware firmware-modem persist
-BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
-
 # Partition sizes
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
