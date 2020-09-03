@@ -6,6 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.low_ram=false \
 	ro.config.zram=false \
 	ro.sf.lcd_density=160 \
+	ro.opengles.version=196608 \
 	telephony.lteOnCdmaDevice=0
 
 #enable voice path for PCM VoIP by default	

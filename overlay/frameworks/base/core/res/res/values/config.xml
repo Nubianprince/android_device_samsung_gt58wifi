@@ -45,9 +45,6 @@
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
 
-    <!-- Default interface to monitor data use -->
-    <string name="config_datause_iface">rmnet0</string>
-
     <!-- An Array of "[ConnectivityManager connectionType],
                       [# simultaneous connection types]"  -->
     <string-array translatable="false" name="radioAttributes">
