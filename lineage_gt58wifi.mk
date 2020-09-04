@@ -18,6 +18,9 @@ $(call inherit-product, device/samsung/gte-common/lineage.mk)
 
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1024
+TARGET_SCREEN_WIDTH := 768
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gt58wifi
