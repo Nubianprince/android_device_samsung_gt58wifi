@@ -25,7 +25,7 @@
 $(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
 
 # Inherit from common
-$(call inherit-product, device/samsung/gte-common/device-common.mk)
+$(call inherit-product, device/samsung/gta-common/device-common.mk)
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
