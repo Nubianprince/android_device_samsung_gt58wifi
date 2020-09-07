@@ -1,6 +1,7 @@
 
 AUDIO_CONFIG_PATH := hardware/qcom-caf/msm8916/audio/configs
 
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 	$(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \

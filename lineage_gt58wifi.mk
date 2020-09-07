@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Inherit some common Evervolv stuff.
-$(call inherit-product, device/samsung/gte-common/lineage.mk)
+$(call inherit-product, device/samsung/gta-common/lineage.mk)
 
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 

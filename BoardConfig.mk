@@ -22,7 +22,7 @@
 #
 
 # Inherit from common
-include device/samsung/gte-common/BoardConfigCommon.mk
+include device/samsung/gta-common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/samsung/gt58wifi
 
