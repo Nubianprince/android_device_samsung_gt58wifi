@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/lineage_gt58wifi.mk
+	$(LOCAL_DIR)/omni_gt58wifi.mk
 
 COMMON_LUNCH_CHOICES := \
-	lineage_gt58wifi-userdebug 
+	omni_gt58wifi-eng 
