@@ -43,6 +43,9 @@ TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := msm8916
 
 # Encryption
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
@@ -109,6 +112,9 @@ TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
 TARGET_RECOVERY_QCOM_RTC_FIX	:= true
 
 # Recovery - TWRP
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_HAS_DOWNLOAD_MODE := true
 TW_HAS_MTP := true
