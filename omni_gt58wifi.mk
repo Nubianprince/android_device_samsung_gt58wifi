@@ -30,8 +30,3 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T350
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := tablet
-
-
-# DTB Work-Around
-PRODUCT_COPY_FILES += \
-     device/samsung/gt58wifi/prebuilt/dt.img:dt.img

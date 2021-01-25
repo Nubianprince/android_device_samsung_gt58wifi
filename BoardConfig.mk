@@ -1,5 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2021The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,9 +47,12 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := msm8916
 
 # Encryption
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
+TARGET_HW_KEYMASTER_V03 := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-TW_INCLUDE_CRYPTO := true
-
+#TARGET_HW_DISK_ENCRYPTION := true
+TARGET_SWV8_DISK_ENCRYPTION := true
+TARGET_USES_METADATA_AS_FDE_KEY := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
@@ -90,31 +92,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS:= true
 
-TARGET_COPY_OUT_VENDOR := system/vendor
-
-# Recovery - TWRP
-RECOVERY_VARIANT := twrp
-
-# Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := $(DEVICE_FOLDER)/recovery/recovery_keys.c
-BOARD_HAS_NO_MISC_PARTITION	:= true
-BOARD_HAS_NO_SELECT_BUTTON	:= true
-BOARD_RECOVERY_SWIPE 		:= true
-BOARD_SUPPRESS_EMMC_WIPE	:= true
-BOARD_SUPPRESS_SECURE_ERASE	:= true
-BOARD_USE_CUSTOM_RECOVERY_FONT	:= \"roboto_23x41.h\"
-BOARD_USES_MMCUTILS	:= true
-RECOVERY_GRAPHICS_USE_LINELENGTH	:= true
-RECOVERY_SDCARD_ON_DATA	:= true
-TARGET_RECOVERY_DENSITY	:= hdpi
-TARGET_RECOVERY_FSTAB	:= $(DEVICE_FOLDER)/recovery/etc/twrp.fstab
-TARGET_RECOVERY_PIXEL_FORMAT	:= "RGB_565"
-TARGET_RECOVERY_QCOM_RTC_FIX	:= true
-
 # Recovery - TWRP
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
+TARGET_RECOVERY_FSTAB	:= $(DEVICE_FOLDER)/recovery/etc/twrp.fstab
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_HAS_DOWNLOAD_MODE := true
 TW_HAS_MTP := true
