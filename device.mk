@@ -24,11 +24,21 @@
 #Inherit from vendor
 $(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
 
-# Inherit from common
-$(call inherit-product, device/samsung/gta-common/device-common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Include package config fragments
-include $(LOCAL_PATH)/product/*.mk
+# Inherit from common
+$(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
+
+# Inherit from vendor
+$(call inherit-product-if-exists, vendor/samsung/gta-common/gta-common-vendor.mk)
+
+# Inhert dalvik heap values from aosp
+$(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
+
+LOCAL_PATH := device/samsung/gt58wifi
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Include package config fragments
+include $(LOCAL_PATH)/product/*.mk

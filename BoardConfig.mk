@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,9 +21,12 @@
 #
 
 # Inherit from common
-include device/samsung/gta-common/BoardConfigCommon.mk
+include device/samsung/msm8916-common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/samsung/gt58wifi
+
+# Init
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(PLATFORM_PATH)/init/init_gta.cpp
 
 # Include board config fragments
 include device/samsung/gt58wifi/board/*.mk
@@ -43,3 +45,5 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 # Partition sizes
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
+
+

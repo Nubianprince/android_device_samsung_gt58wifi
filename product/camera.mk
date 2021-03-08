@@ -1,6 +1,7 @@
 # Camera
 PRODUCT_PACKAGES += \
-	libqc-opt
+	libqc-opt \
+	Camera2
 
 # Configs
 PRODUCT_COPY_FILES += \
