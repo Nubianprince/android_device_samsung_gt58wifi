@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
+
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),gt58wifi)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
+ifneq ($(filter gt58wifi, $(TARGET_DEVICE)),)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
+

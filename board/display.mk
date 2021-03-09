@@ -1,4 +1,0 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1024
-TARGET_SCREEN_WIDTH := 768
-

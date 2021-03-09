@@ -21,18 +21,25 @@
 #
 
 # Inherit from common
-include device/samsung/msm8916-common/BoardConfigCommon.mk
+include device/samsung/msm8916-common/BoardConfigPlatform.mk
 
 PLATFORM_PATH := device/samsung/gt58wifi
 
 # Init
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(PLATFORM_PATH)/init/init_gta.cpp
 
-# Include board config fragments
-include device/samsung/gt58wifi/board/*.mk
-
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := gt58wifi,gt58wifixx,SM-T350
+
+# Low Latency
+AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
+
+# Audio
+USE_QCOM_MIXER_PATHS := 1
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH )/bluetooth
+
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/lib/hw/audio.primary.msm8916.so=25 \
@@ -46,4 +53,11 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
 
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := false
+
+# Wifi
+BOARD_HAVE_SAMSUNG_WIFI := true

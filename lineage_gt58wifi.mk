@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,10 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1024
-TARGET_SCREEN_WIDTH := 768
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gt58wifi
 PRODUCT_NAME := lineage_gt58wifi
@@ -37,6 +32,10 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1024
+TARGET_SCREEN_WIDTH := 768
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
