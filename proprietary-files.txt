@@ -29,8 +29,8 @@ lib/libtfa9895.so:vendor/lib/libtfa9895.so|b217980c2206ff4053b2332a9bffd21f0df7e
 # Camera
 lib/hw/camera.msm8916.so:vendor/lib/hw/camera.vendor.msm8916.so
 lib/libaec_algo_front.so:vendor/lib/libaec_algo_front.so
-lib/libaec_algo_rear.so:vendor/lib/libaec_algo_front.so
-lib/libaf_algo_rear.so:vendor/lib/libaec_algo_front.so
+lib/libaec_algo_rear.so:vendor/lib/libaec_algo_rear.so
+lib/libaf_algo_rear.so:vendor/lib/libaf_algo_rear.so
 lib/libAl_Awb.so:vendor/lib/libAl_Awb.so
 lib/libAl_Awb_Sp.so:vendor/lib/libAl_Awb_Sp.so
 lib/libawb_algo_front.so:vendor/lib/libawb_algo_front.so
