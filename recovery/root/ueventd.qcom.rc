@@ -26,7 +26,7 @@
 #
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     diag
+/dev/diag                 0660   system     qcom_diag
 
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
@@ -123,15 +123,15 @@
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
-/dev/msm_vidc_reg         0660   system     camera
-/dev/msm_vidc_dec         0660   system     camera
-/dev/msm_vidc_dec_sec     0660   system     camera
-/dev/msm_vidc_enc         0660   system     camera
+/dev/msm_vidc_reg         0660   system     audio
+/dev/msm_vidc_dec         0660   system     audio
+/dev/msm_vidc_dec_sec     0660   system     audio
+/dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
+/dev/hw_random            0600   root       root
 /dev/adsprpc-smd          0664   system     system
 
 #permissions for audio
-/dev/adsp/*               0660   system     audio
 /dev/audio_slimslave      0660   system     audio
 /dev/msm_qcelp            0660   system     audio
 /dev/msm_evrc             0660   system     audio
@@ -150,14 +150,15 @@
 /dev/msm_ac3              0660   system     audio
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_cad              0660   system     audio
-/dev/msm_mp3*             0660   system     audio
+/dev/msm_fm               0660   system     audio
 /dev/msm_mvs              0660   system     audio
 /dev/msm_pcm_lp_dec       0660   system     audio
 /dev/msm_preproc_ctl      0660   system     audio
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
-/dev/smd3                 0660   bluetooth  bluetooth
-/dev/smd2                 0660   bluetooth  bluetooth
+/dev/radio0               0640   fm_radio   fm_radio
+/dev/smd3                 0660   bluetooth  net_bt_stack
+/dev/smd2                 0660   bluetooth  net_bt_stack
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
@@ -165,7 +166,6 @@
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
-/dev/i2c-1                0660   media       media
 /dev/i2c-5                0660   media       media
 /dev/voice_svc            0660   system     audio
 /dev/avtimer              0660   system     audio

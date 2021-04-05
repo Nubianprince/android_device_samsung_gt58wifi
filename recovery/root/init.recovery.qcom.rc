@@ -1,13 +1,31 @@
-#import /init.recovery.qcom_decrypt.rc
+service sbinqseecomd /sbin/qseecomd
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+on property:ro.crypto.state=encrypted
+    start sbinqseecomd
 
 on boot
-# Enable Touch Devices
+
+    # Enable Touch Devices
     write /sys/class/touch_key/control manual
     write /sys/class/touch_key/enabled true
     write /sys/class/touch_screen/control manual
     write /sys/class/touch_screen/enabled true
 
+    # save battery by switching to interactive once booted
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor interactive
+
  on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-    setprop sys.usb.ffs.aio_compat 1
