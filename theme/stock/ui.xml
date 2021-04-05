@@ -2,9 +2,9 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>fichl</author>
-		<title>yellow material</title>
-		<description>included in fichls twrp theme pack</description>
+		<author>TeamWin</author>
+		<title>Backup Naowz</title>
+		<description>Default basic theme</description>
 		<preview>preview.png</preview>
 		<themeversion>4</themeversion>
 	</details>
@@ -16,8 +16,8 @@
 	<resources>
 		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="54"/>
 		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
-		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
-		<font name="fixed" filename="DroidSansMono.ttf" size="30"/>
+		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="42"/>
+		<font name="fixed" filename="DroidSansMono.ttf" size="42"/>
 
 		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" size="64"/>
 		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
@@ -188,8 +188,8 @@
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
 		<variable name="highlight" value="#cda100"/>
-		<variable name="fileselector_linecolor" value="#373737"/>
-		<variable name="fileselector_highlight_color" value="#373737"/>
+		<variable name="fileselector_linecolor" value="#555555"/>
+		<variable name="fileselector_highlight_color" value="#555555"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
 		<variable name="fileselector_install_height" value="1152"/>
@@ -203,7 +203,7 @@
 		<variable name="listbox_timezone_height" value="756"/>
 		<variable name="listbox_settings_height" value="960"/>
 		<variable name="listbox_advanced_height" value="700"/>
-		<variable name="listbox_themes_height" value="1180"/>
+		<variable name="listbox_options_height" value="384"/>
 		<variable name="fastscroll_w" value="24"/>
 		<variable name="fastscroll_linew" value="2"/>
 		<variable name="fastscroll_rectw" value="24"/>
@@ -566,10 +566,10 @@
 				<condition var1="tw_hide_kb" var2="0"/>
 				<placement x="0" y="%keyboard_terminal_y%" w="%screen_width%" h="96"/>
 				<keymargin x="0" y="0"/>
-				<background color="#090909"/>
-				<key-alphanumeric color="#090909" font="keylabel" textcolor="#EEEEEE"/>
-				<key-other color="#090909" font="keylabel-small" textcolor="#777777"/>
-				<longpress font="keylabel-longpress" textcolor="#cda100ff" x="12" y="0"/>
+				<background color="#111111"/>
+				<key-alphanumeric color="#111111" font="keylabel" textcolor="#EEEEEE"/>
+				<key-other color="#111111" font="keylabel-small" textcolor="#5b5b5bff"/>
+				<longpress font="keylabel-longpress" textcolor="#5b5b5bff" x="12" y="0"/>
 				<keylabel key="0:k:29" text="Ctrl"/>
 				<keylabel key="0:c:27" text="Esc"/>
 				<keylabel key="0:c:9" text="Tab"/>
@@ -578,7 +578,7 @@
 				<keylabel key="0:k:103" text="^" resource="kb_arrow_up"/>
 				<keylabel key="0:k:106" text="&gt;" resource="kb_arrow_right"/>
 				<highlight color="%highlight_color%"/>
-				<ctrlhighlight color="#cda10080"/>
+				<ctrlhighlight color="#0090CA80"/>
 				<layout1>
 					<keysize height="96" width="154"/>
 					<row1 key01="155:k:29" key02="155:c:27" long02=":c:3" key03="154:c:9" key04="154:k:105" key05="154:k:108" key06="154:k:103" key07="154:k:106"/>
@@ -591,10 +591,10 @@
 				<condition var1="tw_hide_kb" var2="0"/>
 				<placement x="0" y="%keyboard_y%" w="1080" h="644"/>
 				<keymargin x="8" y="8"/>
-				<background color="#090909"/>
-				<key-alphanumeric color="#090909" font="keylabel" textcolor="#EEEEEE"/>
-				<key-other color="#090909" font="keylabel-small" textcolor="#cda100ff"/>
-				<longpress font="keylabel-longpress" textcolor="#cda100ff" x="12" y="0"/>
+				<background color="#111111"/>
+				<key-alphanumeric color="#111111" font="keylabel" textcolor="#EEEEEE"/>
+				<key-other color="#111111" font="keylabel-small" textcolor="#5b5b5bff"/>
+				<longpress font="keylabel-longpress" textcolor="#5b5b5bff" x="12" y="0"/>
 				<keylabel key="0:c:8" text="Bksp" resource="backspace"/>
 				<keylabel key="0:action" text="Enter" resource="enter"/>
 				<keylabel key=" " text="Space" resource="space"/>
