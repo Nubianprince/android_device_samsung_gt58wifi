@@ -2,8 +2,8 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
-		<title>Backup Naowz</title>
+		<author>Nubianprince</author>
+		<title>Stock</title>
 		<description>Default basic theme</description>
 		<preview>preview.png</preview>
 		<themeversion>4</themeversion>
@@ -174,7 +174,7 @@
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
-		<variable name="background_color" value="#070707"/>
+		<variable name="background_color" value="#1A1A1A"/>
 		<variable name="accent_color" value="#cda100"/>
 		<variable name="accent_color_semitransparent" value="#cda10030"/>
 		<variable name="text_color" value="#EEEEEE"/>
@@ -203,7 +203,6 @@
 		<variable name="listbox_timezone_height" value="756"/>
 		<variable name="listbox_settings_height" value="960"/>
 		<variable name="listbox_advanced_height" value="700"/>
-		<variable name="listbox_options_height" value="384"/>
 		<variable name="fastscroll_w" value="24"/>
 		<variable name="fastscroll_linew" value="2"/>
 		<variable name="fastscroll_rectw" value="24"/>

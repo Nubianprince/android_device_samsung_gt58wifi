@@ -2,7 +2,7 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
+		<author>Nubianprince</author>
 		<title>TWRP</title>
 		<description>splash screen</description>
 		<themeversion>4</themeversion>
@@ -18,8 +18,8 @@
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
 		<variable name="background_color" value="#222222"/>
-		<variable name="header_color" value="#cda100"/>
-		<variable name="accent_color" value="#0090CA"/>
+		<variable name="header_color" value="#222222"/>
+		<variable name="accent_color" value="#cda100"/>
 	</variables>
 
 	<pages>
