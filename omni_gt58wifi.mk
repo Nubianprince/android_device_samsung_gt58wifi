@@ -25,3 +25,11 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T350
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := tablet
+
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
