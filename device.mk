@@ -27,11 +27,6 @@ $(call inherit-product, device/samsung/gta-common/device-common.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
-
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -48,3 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Shims
 PRODUCT_PACKAGES += \
     libprocessgroup
+
+# HW Crypto
+PRODUCT_PACKAGES += \
+    libcrypto
+    
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk

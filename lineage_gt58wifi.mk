@@ -42,3 +42,8 @@ BUILD_FINGERPRINT := "samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ5:user
 
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
+
+SAKURA_MAINTAINER := Nubianprince
+SAKURA_OFFICIAL := false
+
+TARGET_GAPPS_ARCH := arm
