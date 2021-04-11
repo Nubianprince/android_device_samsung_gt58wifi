@@ -10,44 +10,6 @@
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
 
-		<string name="fm_chmod644_btn">chmod 644</string>
-		<string name="fm_chmod644ing">chmod 644</string>
-		<string name="theme_options">Theme Options</string>
-		<string name="theme_options_btn">Theme Options</string>
-		<string name="theme_btn">Change Theme</string>
-		<string name="reload_theme_btn">Reload Theme</string>
-		<string name="change_theme">Change Theme</string>
-		<string name="sel_theme">Select new Theme:</string>
-		<string name="th_red">fichl's red</string>
-		<string name="th_orange">fichl's orange</string>
-		<string name="th_blue">fichl's blue</string>
-		<string name="th_green">fichl's green</string>
-		<string name="th_yellow">fichl's yellow</string>
-		<string name="th_black">fichl's black</string>
-		<string name="th_gray">fichl's gray</string>
-		<string name="th_cyan">fichl's cyan</string>
-		<string name="th_purple">fichl's purple</string>
-		<string name="th_pink">fichl's pink</string>
-		<string name="th_img">fichl's image background</string>
-		<string name="th_stock">stock theme</string>
-		<string name="th_A">bird333's darker purple</string>
-		<string name="th_B">franzyroy's red</string>
-		<string name="th_C">gpvecchi's teal</string>
-		<string name="th_D">kolanich's black</string>
-		<string name="th_user1">user1</string>
-		<string name="th_user2">user2</string>
-		<string name="th_user3">user3</string>
-		<string name="th_user4">user4</string>
-		<string name="th_user5">user5</string>
-		<string name="th_user6">user6</string>
-		<string name="th_user7">user7</string>
-		<string name="th_dark_headers">use only theme color with dark headers</string>
-		<string name="th_confirm">Go for it !</string>
-		<string name="th_cc0">Theme changing...</string>
-		<string name="th_cc1">Your new theme will load</string>
-		<string name="th_cc2">in few seconds...</string>
-		<string name="th_cc3">Hold on...</string>
-
 		<!-- Partition display names -->
 		<string name="system">System</string>
 		<string name="system_image">System Image</string>
@@ -264,6 +226,7 @@
 		<string name="enable_backup_comp_chk">Enable compression</string>
 		<string name="skip_digest_backup_chk" version="2">Skip Digest generation during backup</string>
 		<string name="disable_backup_space_chk" version="2">Disable free space check before backup</string>
+		<string name="skip_digest_zip_chk">Skip Digest check before installing zip</string>
 		<string name="current_boot_slot">Current Slot: %tw_active_slot%</string>
 		<string name="boot_slot_a">Slot A</string>
 		<string name="boot_slot_b">Slot B</string>
@@ -497,6 +460,8 @@
 		<string name="fm_set_perms_hdr">Set Permissions</string>
 		<string name="fm_perms">Permissions:</string>
 		<string name="fm_complete">File Operation Complete</string>
+		<string name="fm_open_terminal_btn">Open Terminal Here</string>
+		<string name="fm_edit_file">Edit File</string>
 		<string name="decrypt_data_hdr">Decrypt Data</string>
 		<string name="decrypt_data_enter_pass">Enter Password.</string>
 		<string name="decrypt_data_failed">Password failed, please try again!</string>
@@ -553,7 +518,7 @@
 		<string name="decrypt_users">Decrypt Users</string>
 		<string name="decrypt_users_selection">Select a user ID to decrypt</string>
 		<string name="select_user">Select User</string>
-		<string name="backup_storage_undecrypt_warning">Backup not include some files of user {1}, because the user is not decrypted.</string>
+		<string name="backup_storage_undecrypt_warning">Backup will not include some files of user {1}, because the user is not decrypted.</string>
 		<string name="decrypting_user_fbe">Attempting to decrypt FBE for user {1}...</string>
 		<string name="decrypt_user_success_fbe">User {1} Decrypted Successfully</string>
 		<string name="decrypt_user_fail_fbe">Failed to decrypt user {1}</string>
@@ -776,6 +741,7 @@
 		<string name="unmount_system_err">Failed unmounting System</string>
 		<string name="flash_ab_inactive">Flashing A/B zip to inactive slot: {1}</string>
 		<string name="flash_ab_reboot">To flash additional zips, please reboot recovery to switch to the updated slot.</string>
+		<string name="flash_ab_both_slots">Flash to both slots</string>
 		<string name="ozip_decrypt_decryption">Starting Ozip Decryption...</string>
 		<string name="ozip_decrypt_finish">Ozip Decryption Finished!</string>
 		<string name="fbe_wipe_msg">WARNING: {1} wiped. FBE device should be booted into Android and not Recovery to set initial FBE policy after wipe.</string>
@@ -789,5 +755,10 @@
 		<string name="rescue_party2"> 2. Format data, and/or</string>
 		<string name="rescue_party3"> 3. Clean-flash your ROM.</string>
 		<string name="rescue_party4">The reported problem is: </string>
+		<string name="restore_system_context">Unable to get default context for {1} -- Android may not boot.</string>
+		<string name="change_twrp_folder_btn">Change TWRP folder</string>
+		<string name="change_twrp_folder_on_process">Changing TWRP folder</string>
+		<string name="change_twrp_folder_after_process">TWRP folder changed to</string>
+		<string name="tw_folder_exists">A folder with that name already exists!</string>
 	</resources>
 </language>
