@@ -1,5 +1,3 @@
-# android_device_samsung_gt58wifi
-
 ## Device tree for Samsung Galaxy Tab (A) SM-T350 [gt58wifi]
 
 Basic   | Spec Sheet
