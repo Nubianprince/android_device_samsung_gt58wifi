@@ -1,3 +1,4 @@
+# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,31 +16,29 @@
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
-$(call inherit-product, device/samsung/gt58wifi/device.mk)
+# Boot animation
+BOOT_ANIMATION_SIZE := xga
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := gt58wifi
 PRODUCT_NAME := lineage_gt58wifi
+PRODUCT_DEVICE := gt58wifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T350
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-PRODUCT_AAPT_CONFIG := xlarge
-PRODUCT_AAPT_PREF_CONFIG := mdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1024
-TARGET_SCREEN_WIDTH := 768
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gt58wifixx-user 7.1.1 NMF26X T350XXU1CQJ5 release-keys"
 
 BUILD_FINGERPRINT := "samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ5:user/release-keys"
+
+$(call inherit-product, device/samsung/gt58wifi/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
 
