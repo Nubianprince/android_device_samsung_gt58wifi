@@ -20,7 +20,6 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
-
 # Boot animation
 BOOT_ANIMATION_SIZE := xga
 
@@ -34,6 +33,13 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
+SAKURA_MAINTAINER := Nubianprince
+SAKURA_OFFICIAL := false
+SAKURA_OPLAUNCHER := true
+SAKURA_GAPPS := true
+
+TARGET_GAPPS_ARCH := arm
+
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gt58wifixx-user 7.1.1 NMF26X T350XXU1CQJ5 release-keys"
@@ -43,7 +49,3 @@ BUILD_FINGERPRINT := "samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ5:user
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
 
-SAKURA_MAINTAINER := Nubianprince
-SAKURA_OFFICIAL := false
-
-TARGET_GAPPS_ARCH := arm
