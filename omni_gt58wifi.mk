@@ -25,23 +25,3 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T350
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := tablet
-
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc
-
-PRODUCT_PACKAGES += \
-    qcom_decrypt
-
-# Encryption
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-    
-# Keymaster HAL
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
