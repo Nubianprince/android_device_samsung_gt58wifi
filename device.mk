@@ -44,12 +44,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libprocessgroup
 
-# HW Crypto
-PRODUCT_PACKAGES += \
-    libcrypto
-    
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crypto.volume.filenames_mode=aes-256-cts
-    
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk

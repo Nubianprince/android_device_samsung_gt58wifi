@@ -20,6 +20,9 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
+$(call inherit-product, device/samsung/gt58wifi/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
+
 # Boot animation
 BOOT_ANIMATION_SIZE := xga
 
@@ -38,7 +41,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gt58wifixx-user 7.1.1 NMF26X T350XXU1CQJ5 release-keys"
 
 BUILD_FINGERPRINT := "samsung/gt58wifixx/gt58wifi:7.1.1/NMF26X/T350XXU1CQJ5:user/release-keys"
-
-$(call inherit-product, device/samsung/gt58wifi/device.mk)
-$(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
-
