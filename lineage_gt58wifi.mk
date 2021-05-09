@@ -24,7 +24,8 @@ $(call inherit-product, device/samsung/gt58wifi/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/gt58wifi/gt58wifi-vendor.mk)
 
 # Boot animation
-BOOT_ANIMATION_SIZE := xga
+TARGET_SCREEN_HEIGHT := 1024
+TARGET_SCREEN_WIDTH := 768
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_gt58wifi

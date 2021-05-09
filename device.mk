@@ -27,6 +27,8 @@ $(call inherit-product, device/samsung/gta-common/device-common.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+PRODUCT_SHIPPING_API_LEVEL := 22
+
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
