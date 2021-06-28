@@ -132,6 +132,8 @@ void set_target_properties(const char *device, const char *model)
 
     property_override("ro.ril.telephony.mqanelements", "6");
 
+    property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
+
     /* check if the simslot count file exists */
     if (access(SIMSLOT_FILE, F_OK) == 0) {
         int sim_count = read_integer(SIMSLOT_FILE);
