@@ -28,8 +28,10 @@ $(call inherit-product, device/samsung/gta-common/device-common.mk)
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+    
 # Device specific properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
