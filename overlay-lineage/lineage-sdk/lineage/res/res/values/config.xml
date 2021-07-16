@@ -23,7 +23,10 @@
     <!-- Indicate whether encryption causes significant performances loss.
          This MUST NOT be set to true on devices produced in 2016 or later -->
     <bool name="config_trustLegacyEncryption">true</bool>
-
+    
+         <!--Enable LiveDisplay -->
+    <bool name="config_enableLiveDisplay">true</bool>
+    
     <!-- Hardware keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
