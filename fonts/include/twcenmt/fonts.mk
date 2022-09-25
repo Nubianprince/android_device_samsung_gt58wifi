@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
+# We have to use PRODUCT_PACKAGES (together with BUILD_PREBUILT) instead of
+# PRODUCT_COPY_FILES to install the font files, so that the NOTICE file can
+# get installed too.
 
-LOCAL_PATH := $(call my-dir)
-
-ifneq ($(filter gt58wifi, $(TARGET_DEVICE)),)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-endif
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := fonts_customization.xml
-LOCAL_SRC_FILES    :=  fonts_customization.xml
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_PRODUCT_MODULE := true
-include $(BUILD_PREBUILT)
+PRODUCT_PACKAGES := \
+    TwCenMTCondensed.ttf

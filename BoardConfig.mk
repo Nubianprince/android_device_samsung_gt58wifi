@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,12 +21,25 @@
 #
 
 # Inherit from common
-include device/samsung/gta-common/BoardConfigCommon.mk
+include device/samsung/msm8916-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/gt58wifi
+PLATFORM_PATH := device/samsung/gt58wifi
+
+# Init
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(PLATFORM_PATH)/init/init_gta.cpp
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := gt58wifi,gt58wifixx,SM-T350
+
+# Low Latency
+AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
+
+# Audio
+USE_QCOM_MIXER_PATHS := 1
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
+
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/lib/hw/audio.primary.msm8916.so=25 \
@@ -37,19 +49,15 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-
-# Build config
-BUILD_BROKEN_DUP_RULES := true
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gt58wifi
-TARGET_RECOVERY_DEVICE_MODULES := $(DEVICE_PATH)/init
-
 # Partition sizes
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138295280 # 12138295296 - 32768 for encryption
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
 
-# Vendor SPL
-VENDOR_SECURITY_PATCH := "2017-08-01"
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := false
+
+# Wifi
+BOARD_HAVE_SAMSUNG_WIFI := true
