@@ -6,3 +6,4 @@ allow init sysfs_livedisplay_tuneable:file { read };
 allow init sysfs_livedisplay_tuneable:file { open };
 allow init self:socket { read };
 allow init self:capability2 { block_suspend };
+allow init sysfs_mdnie:lnk_file { read };

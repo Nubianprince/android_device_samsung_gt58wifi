@@ -2,7 +2,7 @@
 /dev/i2c-1                                           u:object_r:smartamp_device:s0
 
 # Camera
-#/data/cam_socket[0-9]                                u:object_r:camera_socket:s0
+/data/cam_socket[0-9]                                u:object_r:camera_socket:s0
 
 # Charger
 /sys/devices(/platform)?/soc\.0/i2c\.[0-9]+/i2c-[0-9]/[0-9]-[a-z0-9]+/max77843-charger/power_supply(/.*)?  u:object_r:sysfs_batteryinfo:s0

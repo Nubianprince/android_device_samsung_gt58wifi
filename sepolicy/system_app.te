@@ -5,3 +5,6 @@ allow system_app sysfs:file { read };
 allow system_app sysfs:file { open };
 allow system_app sysfs_rtc:dir { search };
 allow system_app sysfs:file { getattr };
+allow system_app time_data_file:dir { search };
+allow system_app time_data_file:dir { write };
+allow system_app time_data_file:dir { add_name };

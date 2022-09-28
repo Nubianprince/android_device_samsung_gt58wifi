@@ -9,3 +9,5 @@ allow hal_gnss_default system_data_file:dir { read };
 allow hal_gnss_default system_data_file:dir { open };
 allow hal_gnss_default system_data_file:dir { remove_name };
 allow hal_gnss_default self:socket { read };
+allow hal_gnss_default ssr_device:chr_file { read };
+allow hal_gnss_default ssr_device:chr_file { open };

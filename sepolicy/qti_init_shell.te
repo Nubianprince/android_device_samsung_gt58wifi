@@ -1,0 +1,11 @@
+allow qti_init_shell bluetooth_loader_exec:file { getattr };
+allow qti_init_shell bluetooth_loader_exec:file { execute };
+allow qti_init_shell bluetooth_loader_exec:file { read open };
+allow qti_init_shell bluetooth_loader_exec:file { execute_no_trans };
+allow qti_init_shell bluetooth_efs_file:dir { search };
+allow qti_init_shell bluetooth_efs_file:file { read };
+allow qti_init_shell bluetooth_efs_file:file { open };
+allow qti_init_shell bluetooth_efs_file:file { getattr };
+allow qti_init_shell file_contexts_file:file { read };
+allow qti_init_shell file_contexts_file:file { getattr };
+allow qti_init_shell file_contexts_file:file { open };
