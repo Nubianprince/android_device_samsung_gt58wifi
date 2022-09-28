@@ -1,0 +1,8 @@
+binder_call(system_server, init)
+binder_call(gatekeeperd, init)
+allow init sysfs:file { write };
+allow init sysfs:file { open };
+allow init sysfs_livedisplay_tuneable:file { read };
+allow init sysfs_livedisplay_tuneable:file { open };
+allow init self:socket { read };
+allow init self:capability2 { block_suspend };

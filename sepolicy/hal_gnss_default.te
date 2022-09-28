@@ -1,0 +1,11 @@
+allow hal_gnss_default self:udp_socket { create };
+allow hal_gnss_default system_data_file:file { lock };
+allow hal_gnss_default system_data_file:file { getattr };
+allow hal_gnss_default system_data_file:dir { write };
+allow hal_gnss_default system_data_file:dir { add_name };
+allow hal_gnss_default system_data_file:file { create };
+allow hal_gnss_default system_data_file:file { read write open };
+allow hal_gnss_default system_data_file:dir { read };
+allow hal_gnss_default system_data_file:dir { open };
+allow hal_gnss_default system_data_file:dir { remove_name };
+allow hal_gnss_default self:socket { read };

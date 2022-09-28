@@ -1,0 +1,7 @@
+allow system_app device:chr_file { read write };
+allow system_app device:chr_file { open };
+allow system_app device:chr_file { ioctl };
+allow system_app sysfs:file { read };
+allow system_app sysfs:file { open };
+allow system_app sysfs_rtc:dir { search };
+allow system_app sysfs:file { getattr };

@@ -1,9 +1,13 @@
-# 19.0 bringup - turn on all adbd right away
+# Turn on all adbd
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.debuggable=1 \
     persist.service.adb.enable=1 \
     persist.sys.usb.config=adb
 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	media.settings.xml=/vendor/etc/media_profiles.xml
+	
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
@@ -93,10 +97,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=false \
     ro.use_data_netmgrd=false
 
-# FM
+# Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
-
+	ro.qualcomm.cabl=0 \
+	ro.carrier=wifi-only \
+	ro.radio.noril=1 \
+	ro.config.low_ram=false \
+	ro.config.zram=false \
+	ro.sf.lcd_density=160 \
+	ro.opengles.version=196608 \
+	telephony.lteOnCdmaDevice=0 \
+	qemu.hw.mainkeys=0 \
+	use.voice.path.for.pcm.voip=true
+	
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded \
@@ -136,6 +149,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=3183219 \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true
+
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -187,6 +201,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
+
+# SELinux
+ro.build.selinux=1
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \

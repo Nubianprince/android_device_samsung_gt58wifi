@@ -83,20 +83,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-# Device properties
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.qualcomm.cabl=0 \
-	ro.carrier=wifi-only \
-	ro.radio.noril=1 \
-	ro.config.low_ram=false \
-	ro.config.zram=false \
-	ro.sf.lcd_density=160 \
-	ro.opengles.version=196608 \
-	telephony.lteOnCdmaDevice=0 \
-	qemu.hw.mainkeys=0 \
-	ro.opengles.version=196608 \
-	use.voice.path.for.pcm.voip=true
-
 # Camera
 PRODUCT_PACKAGES += Camera2
 PRODUCT_PACKAGES += \
@@ -113,9 +99,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/A05QF_sr544_module_info.xml \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/B05QF_sr544_module_info.xml \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/C05QF_sr544_module_info.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	media.settings.xml=/vendor/etc/media_profiles.xml
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
