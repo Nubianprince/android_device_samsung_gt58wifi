@@ -1,0 +1,3 @@
+allow mm-qcamerad sysfs:file { read write };
+allow mm-qcamerad sysfs:file { open };
+allow mm-qcamerad sysfs:file { getattr };

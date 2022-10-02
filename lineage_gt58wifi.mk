@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 
 # Include custom fonts
-$(call inherit-product-if-exists, device/samsung/gt58wifi/fonts/include/authentic/fonts.mk)
-$(call inherit-product-if-exists, device/samsung/gt58wifi/fonts/include/twcenmt/fonts.mk)
+$(call inherit-product-if-exists, device/samsung/gt58wifi/include/fonts/authentic/fonts.mk)
+$(call inherit-product-if-exists, device/samsung/gt58wifi/include/fonts/twcenmt/fonts.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy Tab A

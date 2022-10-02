@@ -1,0 +1,4 @@
+allow fsck modem_efs_partition_device:blk_file { read };
+allow fsck modem_efs_partition_device:blk_file { open };
+allow fsck modem_efs_partition_device:blk_file { write };
+allow fsck modem_efs_partition_device:blk_file { ioctl };

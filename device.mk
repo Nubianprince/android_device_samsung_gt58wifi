@@ -83,22 +83,40 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
+# BoringSSL Hacks
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+    
 # Camera
-PRODUCT_PACKAGES += Camera2
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_treble=true \
+    camera2.portability.force_api=1 \
+    debug.camcorder.disablemeta=true
+
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libqc-opt \
     libcamera_shim \
-    camera.msm8916 \
-    Snap \
-    Camera2
+    camera.msm8916
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
    
 # Camera Configs
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/A05QF_sr544_module_info.xml \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/B05QF_sr544_module_info.xml \
 	$(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/C05QF_sr544_module_info.xml
+
+# Connectivity Engine
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.cne.dpm=0 \
+    persist.cne.feature=0 \
+    persist.dpm.feature=0
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -144,7 +162,7 @@ PRODUCT_PACKAGES += \
 
  # Fonts
 PRODUCT_PACKAGES += \
-    fonts_custom.xml \
+    fonts_customization.xml \
     FontAuthenticOverlay \
     FontTwCenMtOverlay
 

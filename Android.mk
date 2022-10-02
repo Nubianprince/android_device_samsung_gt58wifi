@@ -7,14 +7,6 @@ endif
 ifeq ($(BOARD_VENDOR),samsung)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8916)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := fonts_customization.xml
-LOCAL_SRC_FILES    :=  fonts_customization.xml
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_PRODUCT_MODULE := true
-include $(BUILD_PREBUILT)
-
 # CMN
 CMN_IMAGES := \
 	cmnlib.b00 cmnlib.b01 cmnlib.b02 cmnlib.b03 cmnlib.mdt
