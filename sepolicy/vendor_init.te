@@ -2,4 +2,3 @@ allow vendor_init radio_core_data_file:file { write };
 allow vendor_init radio_core_data_file:file { open };
 allow vendor_init radio_core_data_file:file { setattr };
 allow vendor_init proc:file { write };
-

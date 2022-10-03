@@ -1,1 +1,2 @@
 get_prop(system_server, build_bootimage_prop)
+get_prop(flags_health_check, build_bootimage_prop)
