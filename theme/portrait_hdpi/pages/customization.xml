@@ -946,7 +946,7 @@
 				<placement x="0" y="%row2_2a_y%" w="%screen_w%" h="%lb_l1%"/>
 				<font resource="font2" spacing="%fileselector_spacing%" color="%text%" />
 				<data name="theme_font_tmp"/>
-				<listitem name="Roboto Slab">RobotoSlab</listitem>
+				<listitem name="TW Cen MT">TwCenMTCondensed</listitem>
 			</listbox>
 			
 			<listbox>
@@ -1030,7 +1030,7 @@
 				<placement x="0" y="%row2_2a_y%" w="%screen_w%" h="%lb_l1%"/>
 				<font resource="font2" spacing="%fileselector_spacing%" color="%text%" />
 				<data name="theme_sec_font_tmp"/>
-				<listitem name="Roboto Slab">RobotoSlab</listitem>
+				<listitem name="TW Cen MT">TwCenMTCondensed</listitem>
 			</listbox>
 			
 			<listbox>

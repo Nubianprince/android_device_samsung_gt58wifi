@@ -24,19 +24,10 @@ FDEVICE="gt58wifi"
 export TW_DEFAULT_LANGUAGE="en"
 export OF_MAINTAINER=Nubianprince
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-export FOX_USE_XZ_UTILS=1
 export LC_ALL="C"
 export FOX_BUILD_TYPE=Unofficial
-
-# Test
-#export FOX_LEGACY_TOOLS=1
 export FOX_EXTREME_SIZE_REDUCTION=1
-
-# This device is not a Xiaomi device
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
-#Set this to 1 to make a plain build that skips all the OrangeFox patches
-export OF_VANILLA_BUILD=1
-
 
 # let's see what are our build VAR
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

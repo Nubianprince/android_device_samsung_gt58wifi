@@ -12,8 +12,8 @@
 	<resources>
 		<image name="splash_logo_w" filename="Splash/logo_w" retainaspect="1"/>
 		<image name="splash_bg" filename="Splash/original" retainaspect="1"/>
-		<font name="of" filename="EuclidFlex-Medium.ttf" size="64"/>
-		<font name="recovery" filename="EuclidFlex-Regular.ttf" size="52"/>
+		<font name="of" filename="TwCenMTCondensed.ttf" size="64"/>
+		<font name="recovery" filename="TwCenMTCondensed.ttf" size="52"/>
 	</resources>
 
 	<variables>

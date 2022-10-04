@@ -24,6 +24,19 @@ TARGET_BOOTLOADER_BOARD_NAME := msm8916
 # Decrypt
 BOARD_USES_QCOM_DECRYPTION := true
 
+# Encryption
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
+TARGET_HW_KEYMASTER_V03 := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
+ifeq ($(RECOVERY_VARIANT),twrp)
+    TARGET_HW_DISK_ENCRYPTION := false
+    TARGET_SWV8_DISK_ENCRYPTION := false
+else
+    TARGET_HW_DISK_ENCRYPTION := true
+    TARGET_SWV8_DISK_ENCRYPTION := true
+endif
+
 # Kernel
 BOARD_KERNEL_CMDLINE += \
 	console=null \
@@ -57,9 +70,9 @@ ifneq ($(wildcard $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin
 endif
 
 # Snapdragon LLVM
-#TARGET_USE_SDCLANG := false
+TARGET_USE_SDCLANG := false
 
-# Assertss
+# Asserts
 TARGET_OTA_ASSERT_DEVICE := gt58wifi,gt58wifixx,SM-T350
 
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -69,7 +82,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138262512
 
-    
+ # SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(DEVICE_FOLDER)/sepolicy
+       
 #Debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
@@ -82,7 +98,8 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/recovery/root/etc/twrp.fstab
     
 # Recovery - TWRP
-TW_THEME := portrait_hdpi
+TW_CUSTOM_THEME := $(DEVICE_FOLDER)/theme/portrait_hdpi
+#TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_HAS_DOWNLOAD_MODE := true
 TW_HAS_MTP := true
