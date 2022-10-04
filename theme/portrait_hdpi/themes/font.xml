@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<recovery>
+	<resources>
+		<font name="status" filename="RobotoCondensed-Regular.ttf" size="40"/>
+		<font name="bigfont" filename="RobotoCondensed-Regular.ttf" size="48"/>
+		<font name="body1" filename="RobotoCondensed-Regular.ttf" size="42"/>
+		<font name="body2" filename="RobotoCondensed-Regular.ttf" size="42"/>
+		<font name="subhead" filename="RobotoCondensed-Regular.ttf" size="52"/>
+		<font name="title" filename="RobotoCondensed-Regular.ttf" size="60"/>
+		<font name="mainbutton" filename="RobotoCondensed-Regular.ttf" size="64"/>
+		<font name="button" filename="RobotoCondensed-Regular.ttf" size="41"/>
+		<font name="menu" filename="RobotoCondensed-Regular.ttf" size="44"/>
+		<font name="input_fail" filename="RobotoCondensed-Regular.ttf" size="32"/>
+		<font name="splash" filename="RobotoCondensed-Regular.ttf" size="47"/>
+
+		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
+		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
+		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
+		<font name="font_b" filename="RobotoCondensed-Regular.ttf" size="200"/>
+
+		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" size="64"/>
+		<font name="keylabel-bold" filename="RobotoCondensed-Regular.ttf" size="46"/>
+		<font name="keylabel-num" filename="RobotoCondensed-Regular.ttf" size="72"/>
+		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
+		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
+		
+		<font name="Secondary" filename="RobotoCondensed-Regular.ttf" size="42"/>
+		<font name="Secondary-title" filename="RobotoCondensed-Regular.ttf" size="58"/>
+		<font name="caption" filename="RobotoCondensed-Regular.ttf" size="36"/>
+		
+		<font name="clock" filename="GoogleSans-Regular.ttf" size="210"/>
+		<font name="info" filename="RobotoCondensed-Regular.ttf" size="50"/>
+	</resources>
+	
+	<variables>
+		<variable name="theme_font" value="Roboto"/>
+		<variable name="theme_sec_font" value="GoogleSans"/>
+		<variable name="theme_font_size" value="n"/>
+		<variable name="theme_font_weight" value="0"/>
+	</variables>
+</recovery>

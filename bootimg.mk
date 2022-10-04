@@ -1,25 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 LOCAL_PATH := $(call my-dir)
-
-TWRP_DEVICE := SM-T350
-TWRP_VERSION := 3.5.1_9
-TWRP_BUILD_TYPE := Unofficial
-TWRP_BUILD_DATE := $(shell date --utc +%Y%m%d)
- 
-TWRP_OUT_NAME := $(PRODUCT_OUT)/TWRP_$(TWRP_VERSION)_$(TWRP_DEVICE)_$(TWRP_BUILD_DATE)_$(TWRP_BUILD_TYPE)
 
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)
 ifneq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),true)
@@ -90,6 +69,6 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_k
 	$(hide) $(LOKI_TOOL) patch recovery $(TARGET_LOKI_ABOOT_IMAGE) $@ $@.lok
 	$(hide) cp $@.lok $@ || true
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
-		$(hide) tar -C $(PRODUCT_OUT) -H ustar -c recovery.img > $(TWRP_OUT_NAME)".tar"
-	$(hide) cp $@ $(TWRP_OUT_NAME)".img"
 	@echo "Made recovery image: $@"
+
+

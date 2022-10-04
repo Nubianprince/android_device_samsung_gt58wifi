@@ -18,7 +18,34 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
+FDEVICE="gt58wifi"
 
 
-add_lunch_combo omni_gt58wifi-eng
+export TW_DEFAULT_LANGUAGE="en"
+export OF_MAINTAINER=Nubianprince
+export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export FOX_USE_XZ_UTILS=1
+export LC_ALL="C"
+export FOX_BUILD_TYPE=Unofficial
 
+# Test
+#export FOX_LEGACY_TOOLS=1
+export FOX_EXTREME_SIZE_REDUCTION=1
+
+# This device is not a Xiaomi device
+export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
+#Set this to 1 to make a plain build that skips all the OrangeFox patches
+export OF_VANILLA_BUILD=1
+
+
+# let's see what are our build VAR
+	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
+  	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
+  	   export | grep "OF_" >> $FOX_BUILD_LOG_FILE
+   	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
+  	   export | grep "TW_" >> $FOX_BUILD_LOG_FILE
+ 	fi
+
+ 	for var in eng user userdebug; do
+  		add_lunch_combo omni_"$FDEVICE"-$var
+  	done

@@ -18,4 +18,5 @@ PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/omni_gt58wifi.mk
 
 COMMON_LUNCH_CHOICES := \
-	omni_gt58wifi-eng 
+	omni_gt58wifi-eng \
+	omni_gt58wifi-userdebug
