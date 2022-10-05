@@ -26,3 +26,16 @@ allow recovery tmpfs:fifo_file { create };
 allow recovery tmpfs:fifo_file { read };
 allow recovery tmpfs:fifo_file { open };
 allow recovery rootfs:fifo_file { unlink };
+
+allow recovery media_rw_data_file:dir { read };
+allow recovery media_rw_data_file:dir { open };
+allow recovery media_rw_data_file:dir { getattr };
+allow recovery tmpfs:lnk_file { read };
+allow recovery mtp_device:chr_file { open };
+allow recovery mtp_device:chr_file { read };
+allow recovery vfat:dir { read };
+allow recovery media_rw_data_file:file { getattr };
+allow recovery self:capability { sys_resource };
+allow recovery tmpfs:fifo_file { getattr };
+allow recovery service_contexts_file:file { getattr };
+allow recovery system_data_file:dir { search };

@@ -104,6 +104,12 @@
 				<condition var1="use_fixed_font" var2="1"/>
 				<font resource="fixed"/>
 			</console>
+			
+						<console>
+				<placement x="%col1_x%" y="%console_y%" w="%console_width%" h="%console_action_height%"/> 
+				<condition var1="use_fixed_font" var2="2"/>
+				<font resource="fixed"/>
+			</console>
 		</template>
 
         <template name="base_nav">
@@ -581,6 +587,12 @@
 			<console>
 				<placement x="%col1_x%" y="%console_y%" w="%console_width%" h="%console_action_height_big%"/> 
 				<condition var1="use_fixed_font" var2="1"/>
+				<font resource="fixed"/>
+			</console>
+			
+			<console>
+				<placement x="%col1_x%" y="%console_y%" w="%console_width%" h="%console_action_height_big%"/> 
+				<condition var1="use_fixed_font" var2="2"/>
 				<font resource="fixed"/>
 			</console>
 		</template>

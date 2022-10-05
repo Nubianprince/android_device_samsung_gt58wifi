@@ -28,6 +28,7 @@ export LC_ALL="C"
 export FOX_BUILD_TYPE=Unofficial
 export FOX_EXTREME_SIZE_REDUCTION=1
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
+export OF_TWRP_COMPATIBILITY_MODE=1
 
 # let's see what are our build VAR
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

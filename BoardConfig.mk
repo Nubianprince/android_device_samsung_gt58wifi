@@ -60,7 +60,7 @@ TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/oc
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
 TARGET_CUSTOM_DTBTOOL := dtbToolLineage
 
 # Kernel - Toolchain
