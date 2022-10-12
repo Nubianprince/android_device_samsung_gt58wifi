@@ -1,13 +1,17 @@
 # Turn on all adbd
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.debuggable=1 \
     persist.service.adb.enable=1 \
-    persist.sys.usb.config=adb
+
+PRODUCT_PRODUCT_PROPERTIES += \
+		    persist.sys.usb.config=mtp,adb \
+		    ro.adb.secure=0 \
+		    ro.secure=0 \
+		    ro.debuggable=1
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.settings.xml=/vendor/etc/media_profiles.xml
-	
+
 # Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
@@ -39,6 +43,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.record.conc.disabled=true \
     vendor.voice.voip.conc.disabled=true
 
+# Better Scrolling
+PRODUCT_PROPERTY_OVERRIDES += \
+windowsmgr.max_events_per_sec=150 \
+ro.min_pointer_dur=8  \
+ro.max.fling_velocity=12000 \
+ro.min.fling_velocity=8000 \
+persist.sys.scrollingcache=3 \
+debug.sf.hw=1
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
@@ -56,9 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.shutdown_timeout=0
 
 # Camera
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
-
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_treble=true \
     camera2.portability.force_api=1 \
@@ -109,7 +119,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=0 \
 	qemu.hw.mainkeys=0 \
 	use.voice.path.for.pcm.voip=true
-	
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded \
@@ -150,6 +160,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+		    ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -203,7 +216,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
 
 # SELinux
-ro.build.selinux=1
+#ro.build.selinux=1
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
