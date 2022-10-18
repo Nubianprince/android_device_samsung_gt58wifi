@@ -1,7 +1,1 @@
-allow audioserver device:chr_file { ioctl };
-allow audioserver smartamp_device:chr_file { read write };
-allow audioserver smartamp_device:chr_file { open };
-allow audioserver smartamp_device:chr_file { ioctl };
-allow audioserver sysfs_batteryinfo:dir { search };
-allow audioserver sysfs_batteryinfo:file { read };
-allow audioserver sysfs_batteryinfo:file { open };
+allow audioserver smartamp_device:chr_file rw_file_perms;

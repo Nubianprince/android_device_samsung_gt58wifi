@@ -77,11 +77,11 @@
 #define FAILURE FALSE
 
 #ifndef GPS_CONF_FILE
-#define GPS_CONF_FILE            "/etc/gps.conf"   //??? platform independent
+#define GPS_CONF_FILE            "/vendor/etc/gps.conf"   //??? platform independent
 #endif
 
 #ifndef SAP_CONF_FILE
-#define SAP_CONF_FILE            "/etc/sap.conf"
+#define SAP_CONF_FILE            "/vendor/etc/sap.conf"
 #endif
 
 #define XTRA1_GPSONEXTRA         "xtra1.gpsonextra.net"
@@ -971,9 +971,9 @@ inline void LocEngReportStatus::log() const {
 //        case LOC_ENG_MSG_REPORT_NMEA:
 LocEngReportNmea::LocEngReportNmea(void* locEng,
                                    const char* data, int len) :
-    LocMsg(), mLocEng(locEng), mNmea(new char[len+1]), mLen(len)
+    LocMsg(), mLocEng(locEng), mNmea(new char[len]), mLen(len)
 {
-    strlcpy(mNmea, data, len+1);
+    memcpy((void*)mNmea, (void*)data, len);
     locallog();
 }
 void LocEngReportNmea::proc() const {

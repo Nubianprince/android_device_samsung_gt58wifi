@@ -86,17 +86,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-# BoringSSL Hacks
-PRODUCT_PACKAGES += \
-    libboringssl-compat
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libcamera_shim \
-    camera.msm8916 \
-		Camera2
+    camera.msm8916
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
@@ -148,12 +143,6 @@ PRODUCT_PACKAGES += \
 # Encryption
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
- # Fonts
-PRODUCT_PACKAGES += \
-    fonts_customization.xml \
-    FontAuthenticOverlay \
-    FontTwCenMtOverlay
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -263,10 +252,14 @@ PRODUCT_PACKAGES += \
     libkeyutils \
     tcpdump
 
-		# Perf
-		PRODUCT_PROPERTY_OVERRIDES += \
-		    ro.vendor.extension_library=libqti-perfd-client.so
-				
+# Native libraries
+#PRODUCT_COPY_FILES += \
+#   $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+ ro.vendor.extension_library=libqti-perfd-client.so
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.autofocus.xml \
@@ -364,7 +357,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-		    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # USB HAL
 PRODUCT_PACKAGES += \

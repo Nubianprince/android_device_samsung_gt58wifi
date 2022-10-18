@@ -47,7 +47,6 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
-USE_QCOM_MIXER_PATHS := 1
 AUDIO_CONFIG_PATH := hardware/qcom-caf/msm8916/audio/configs
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
@@ -56,6 +55,7 @@ BOARD_USES_GENERIC_AUDIO := true
 TARGET_USES_QCOM_MM_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
+USE_QCOM_MIXER_PATHS := 1
 
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
@@ -85,11 +85,6 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 ?= false
 TARGET_PROVIDES_CAMERA_HAL := true
 TARGET_USE_VENDOR_CAMERA_EXT := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
-
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_SHOW_PERCENTAGE := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
@@ -121,9 +116,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
-ifeq ($(filter gt58wifi gt510wifi gtelwifiue,$(TARGET_DEVICE)),)
-DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest_telephony.xml
-endif
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
@@ -133,7 +125,7 @@ BOARD_KERNEL_CMDLINE += \
 	msm_rtb.filter=0x3F \
 	ehci-hcd.park=3 \
 	androidboot.bootdevice=7824900.sdhci \
-        androidboot.selinux=permissive
+  androidboot.selinux=permissive
 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -189,9 +181,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/hw/rild=27
 
 # Power
-TARGET_HAS_LEGACY_POWER_STATS := true
-TARGET_HAS_NO_POWER_STATS := true
-TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Radio
@@ -223,9 +212,6 @@ TARGET_LD_SHIM_LIBS := \
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
-
-# Vendor
-PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true

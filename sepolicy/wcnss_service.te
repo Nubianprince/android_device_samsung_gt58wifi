@@ -2,3 +2,6 @@ allow wcnss_service wifi_efs_file:dir { search };
 allow wcnss_service wifi_efs_file:file { read };
 allow wcnss_service wifi_efs_file:file { open };
 allow wcnss_service wifi_efs_file:file { getattr };
+allow wcnss_service wifi_efs_file:dir search;
+allow wcnss_service wifi_efs_file:file r_file_perms;
+allow wcnss_service efs_file:dir { search };

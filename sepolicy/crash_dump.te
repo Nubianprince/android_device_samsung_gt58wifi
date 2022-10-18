@@ -1,0 +1,3 @@
+allow crash_dump init:process { ptrace };
+allow crash_dump device:chr_file { open };
+allow crash_dump device:chr_file { getattr };

@@ -1,0 +1,8 @@
+allow zygote device:file { write };
+allow zygote device:file { open };
+allow zygote proc_cmdline:file { read };
+allow zygote proc_cmdline:file { open };
+allow zygote proc_cmdline:file { getattr };
+allow zygote sysfs:file { read };
+allow zygote sysfs:file { open };
+allow zygote sysfs:file { getattr };

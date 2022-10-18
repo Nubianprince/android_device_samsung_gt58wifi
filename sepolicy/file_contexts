@@ -25,15 +25,16 @@
 /efs/imei(/.*)?                                      u:object_r:imei_efs_file:s0
 /efs/wifi(/.*)?                                      u:object_r:wifi_efs_file:s0
 
-
 /persist                         u:object_r:mnt_vendor_file:s0
-/tombstones                  u:object_r:rootfs:s0
 
 # Firmware
 /firmware-modem(/.*)?                                u:object_r:firmware_file:s0
 
 # Gatekeeper
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
+
+# Macloader
+/system/bin/macloader                                u:object_r:macloader_exec:s0
 
 # mDNIe
 /sys/class/mdnie/mdnie(/.*)?                         u:object_r:sysfs_mdnie:s0
@@ -47,6 +48,8 @@
 
 # RIL
 /dev/socket/rild-cas                                 u:object_r:rild_cas_socket:s0
+
+/tombstones             u:object_r:rootfs:s0
 
 # USB
 /sys/devices/platform/msm_hsusb/gadget/lun0(/.*)?    u:object_r:sysfs_android_usb:s0
