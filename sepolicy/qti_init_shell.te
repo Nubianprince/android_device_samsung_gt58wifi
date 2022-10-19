@@ -30,3 +30,5 @@ allow qti_init_shell toolbox_exec:file { getattr };
 allow qti_init_shell toolbox_exec:file { execute };
 allow qti_init_shell toolbox_exec:file { read open };
 allow qti_init_shell toolbox_exec:file { execute_no_trans };
+
+#allow qti_init_shell proc_kernel_sched:file { open write };
