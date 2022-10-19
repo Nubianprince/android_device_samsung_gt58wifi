@@ -1,0 +1,5 @@
+libexifa.so
+libjpega.so
+libqti-perfd-client.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so

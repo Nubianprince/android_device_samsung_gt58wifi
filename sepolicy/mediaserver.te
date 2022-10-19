@@ -1,0 +1,6 @@
+allow mediaserver smartamp_device:chr_file { read write ioctl open };
+allow mediaserver device:chr_file { read write };
+allow mediaserver device:chr_file { open };
+allow mediaserver device:chr_file { ioctl };
+allow mediaserver camera_data_file:sock_file { write };
+allow mediaserver init:unix_dgram_socket { sendto };

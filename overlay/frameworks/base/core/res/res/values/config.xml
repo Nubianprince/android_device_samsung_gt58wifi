@@ -39,6 +39,21 @@
         <item>"wifi_p2p,13,1,0,-1,true"</item>
     </string-array>
 
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/boot-framework.vdex"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/oat/arm/services.vdex"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/boot.vdex"</item>
+        <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system/bin/surfaceflinger"</item>
+    </string-array>
+
     <!-- This device is not "voice capable"; it's data-only. -->
     <bool name="config_voice_capable">false</bool>
 
@@ -52,6 +67,9 @@
         <item>"0,1"</item>
         <item>"7,1"</item>
     </string-array>
+
+    <!-- Whether to allow process with media UID to access CameraServiceProxy -->
+    <bool name="config_allowMediaUidForCameraServiceProxy">true</bool>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should

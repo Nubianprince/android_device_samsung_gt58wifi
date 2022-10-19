@@ -1,0 +1,29 @@
+binder_call(system_server, init)
+binder_call(gatekeeperd, init)
+allow init sysfs:file { write };
+allow init sysfs:file { open };
+allow init sysfs:file { read };
+allow init mnt_vendor_file:dir { mounton };
+allow init efs_file:dir { mounton };
+allow init vendor_file:file { execute_no_trans };
+allow init vendor_toolbox_exec:file { execute_no_trans };
+allow init radio_data_file:lnk_file { read };
+allow init btnvtool_exec:file { execute_no_trans };
+allow init sysfs_graphics:file { write };
+allow init sysfs_graphics:file { open };
+allow init sysfs_graphics:file { read };
+allow init sysfs_livedisplay_tuneable:file { read };
+allow init sysfs_livedisplay_tuneable:file { open };
+allow init sysfs_livedisplay_tuneable:file { write };
+allow init self:socket { read };
+allow init self:capability2 { block_suspend };
+allow init sysfs_mdnie:lnk_file { read };
+allow init vndbinder_device:chr_file { read };
+allow init vndbinder_device:chr_file { write };
+allow init vndbinder_device:chr_file { open };
+allow init vndbinder_device:chr_file { ioctl };
+
+#allow init hal_drm_hwservice:hwservice_manager { add find };
+#allow init hal_light_hwservice:hwservice_manager { add find };
+#allow init hal_lineage_livedisplay_hwservice:hwservice_manager { add find };
+#allow init hidl_base_hwservice:hwservice_manager add;

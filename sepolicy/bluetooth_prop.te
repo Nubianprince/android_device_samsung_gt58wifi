@@ -1,0 +1,2 @@
+get_prop(zygote, bluetooth_prop)
+get_prop(flags_health_check, bluetooth_prop)

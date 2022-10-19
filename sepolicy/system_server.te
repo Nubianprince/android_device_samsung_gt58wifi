@@ -1,0 +1,16 @@
+allow system_server device:chr_file { read write };
+allow system_server device:chr_file { open };
+allow system_server device:chr_file { ioctl };
+allow system_server app_efs_file:dir { search };
+allow system_server sysfs_mdnie:file rw_file_perms;
+allow system_server efs_file:dir { search };
+
+r_dir_file(system_server, app_efs_file)
+allow system_server vibrator_sysfs_file:dir search;
+allow system_server vibrator_sysfs_file:file rw_file_perms;
+
+# To improve app launch times - we would like to force all tasks to
+# run on big cores for app launch (sched_boost) - instead of just
+# boosting them to make it "more likely" to run on big cores.
+allow system_server domain:process setsched;
+allow system_server init:binder { call };

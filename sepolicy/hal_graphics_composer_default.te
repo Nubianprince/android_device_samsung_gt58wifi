@@ -1,0 +1,22 @@
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { read };
+allow hal_graphics_composer_default sysfs:file { read };
+allow hal_graphics_composer_default sysfs:file { open };
+allow hal_graphics_composer_default sysfs:file { getattr };
+allow hal_graphics_composer_default device:chr_file { read write };
+allow hal_graphics_composer_default device:chr_file { open };
+allow hal_graphics_composer_default device:chr_file { ioctl };
+allow hal_graphics_composer_default device:chr_file { read };
+allow hal_graphics_composer_default sysfs:file { write };
+allow hal_graphics_composer_default device:chr_file { write };
+allow hal_graphics_composer_default vndbinder_device:chr_file { ioctl };
+allow hal_graphics_composer_default vndservicemanager:binder { call };
+allow hal_graphics_composer_default vndservicemanager:binder { transfer };
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { create };
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { setopt };
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { bind };
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { read };
+allow hal_graphics_composer_default vndbinder_device:chr_file { read };
+allow hal_graphics_composer_default vndbinder_device:chr_file { write };
+allow hal_graphics_composer_default vndbinder_device:chr_file { open };
+
+#allow hal_graphics_composer_default init_service_status_private_prop:file { getattr open read };

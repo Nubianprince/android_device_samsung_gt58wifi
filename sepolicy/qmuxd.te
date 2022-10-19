@@ -1,0 +1,4 @@
+#allow qmuxd default_prop:file { open };
+#allow qmuxd default_prop:file { read };
+#allow qmuxd radio_prop:file { open };
+#allow qmuxd radio_prop:file { read };

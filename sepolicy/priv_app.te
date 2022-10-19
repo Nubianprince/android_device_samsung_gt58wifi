@@ -1,0 +1,4 @@
+allow priv_app device:chr_file { read write };
+allow priv_app device:chr_file { open };
+allow priv_app device:chr_file { ioctl };
+allow priv_app sysfs:file { open };
