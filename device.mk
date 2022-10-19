@@ -245,10 +245,9 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
 
-
 #Matlog
 PRODUCT_PACKAGES += \
-   Matlog
+   MatLog
 
 # Misc
 PRODUCT_PACKAGES += \
