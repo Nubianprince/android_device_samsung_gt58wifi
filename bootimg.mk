@@ -15,10 +15,10 @@
 LOCAL_PATH := $(call my-dir)
 
 TWRP_DEVICE := SM-T350
-TWRP_VERSION := 3.5.1_9
+TWRP_VERSION := 3.7.0_9
 TWRP_BUILD_TYPE := Unofficial
 TWRP_BUILD_DATE := $(shell date --utc +%Y%m%d)
- 
+
 TWRP_OUT_NAME := $(PRODUCT_OUT)/TWRP_$(TWRP_VERSION)_$(TWRP_DEVICE)_$(TWRP_BUILD_DATE)_$(TWRP_BUILD_TYPE)
 
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)

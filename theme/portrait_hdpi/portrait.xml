@@ -412,6 +412,13 @@
 				<listitem name="{@skip_digest_zip_chk=Skip Digest check before installing zip}">
 					<data variable="tw_skip_digest_check_zip"/>
 				</listitem>
+				<listitem name="{@auto_reflashtwrp_chk=Automatically Reflash TWRP after flashing a ROM}">
+					<conditions>
+						<condition var1="tw_has_boot_slots" var2="1"/>
+						<condition var1="tw_has_repack_tools" var2="1"/>
+					</conditions>
+					<data variable="tw_auto_reflashtwrp"/>
+				</listitem>
 				<listitem name="{@install_reboot_chk=Reboot after installation is complete}">
 					<data variable="tw_install_reboot"/>
 				</listitem>
@@ -2883,13 +2890,6 @@
 		</page>
 
 		<page name="reboot">
-			<action>
-				<action function="checkforapp"></action>
-				<action function="page">reboot2</action>
-			</action>
-		</page>
-
-		<page name="reboot2">
 			<template name="page"/>
 
 			<text style="text_l">
@@ -2976,7 +2976,7 @@
 					</actions>
 				</listitem>
 
-				<listitem name="{@rb_edl_btn=Edl}">
+				<listitem name="{@rb_edl_btn=EDL}">
 					<condition var1="tw_edl_mode" var2="1"/>
 					<actions>
 						<action function="set">tw_back=reboot</action>
@@ -2991,16 +2991,16 @@
 						<action function="set">tw_slider_text={@swipe_reboot=Swipe to Reboot}</action>
 						<action function="page">rebootcheck</action>
 					</actions>
-				</button>
+				</listitem>
 			</listbox>
 
 			<text style="text_m">
 				<condition var1="tw_has_boot_slots" var2="1"/>
-				<placement x="%center_x%" y="%row15_y%" placement="5"/>
+				<placement x="%center_x%" y="%row17_y%" placement="5"/>
 				<text>{@current_boot_slot=Current Slot: %tw_active_slot%}</text>
 			</text>
 
-			<button style="main_button_half_height">
+			<button style="main_button">
 				<condition var1="tw_has_boot_slots" var2="1"/>
 				<placement x="%indent%" y="%row19_y%"/>
 				<text>{@boot_slot_a=Slot A}</text>
@@ -3016,7 +3016,7 @@
 				</actions>
 			</button>
 
-			<button style="main_button_half_height">
+			<button style="main_button">
 				<condition var1="tw_has_boot_slots" var2="1"/>
 				<placement x="%center_x%" y="%row19_y%"/>
 				<text>{@boot_slot_b=Slot B}</text>
@@ -3029,17 +3029,6 @@
 					<action function="set">tw_action_text2=</action>
 					<action function="set">tw_complete_text1={@changing_boot_slot_complete=Change Boot Slot Complete}</action>
 					<action function="page">action_page</action>
-				</actions>
-			</button>
-
-			<button style="main_button_half_height">
-				<condition var1="tw_app_install_status" var2="1"/>
-				<placement x="%indent%" y="%row22_y%"/>
-				<text>{@reboot_install_app_hdr=Install TWRP App}</text>
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_appinstall_title={@reboot_hdr=Reboot}</action>
-					<action function="page">installapp</action>
 				</actions>
 			</button>
 
@@ -3256,6 +3245,13 @@
 				</listitem>
 				<listitem name="{@unmount_sys_install=Unmount System before installing a ZIP}">
 					<data variable="tw_unmount_system"/>
+				</listitem>
+				<listitem name="{@auto_reflashtwrp_chk=Automatically Reflash TWRP after flashing a ROM}">
+					<conditions>
+						<condition var1="tw_has_boot_slots" var2="1"/>
+						<condition var1="tw_has_repack_tools" var2="1"/>
+					</conditions>
+					<data variable="tw_auto_reflashtwrp"/>
 				</listitem>
 			</listbox>
 
@@ -3572,7 +3568,14 @@
 			</text>
 
 			<checkbox>
+				<condition var1="tw_logcat_exists" var2="1"/>
 				<placement x="%indent%" y="%row4_y%"/>
+				<text>{@include_logcat=Include Logcat}</text>
+				<data variable="tw_include_logcat" value="1"/>
+			</checkbox>
+
+			<checkbox>
+				<placement x="%indent%" y="%row6_y%"/>
 				<text>{@include_kernel_log=Include Kernel Log}</text>
 				<data variable="tw_include_kernel_log" value="1"/>
 			</checkbox>
@@ -3690,6 +3693,22 @@
 						<action function="page">repackselect</action>
 					</actions>
 				</listitem>
+				<listitem name="{@reflash_twrp=Flash Current TWRP}">
+					<conditions>
+						<condition var1="tw_has_boot_slots" var2="1"/>
+						<condition var1="tw_has_repack_tools" var2="1"/>
+					</conditions>
+					<actions>
+						<action function="set">tw_repack_kernel=0</action>
+						<action function="set">tw_back=advanced</action>
+						<action function="set">tw_action=reflashtwrp</action>
+						<action function="set">tw_text1={@reflash_twrp_confirm=Flash Current TWRP?}</action>
+						<action function="set">tw_action_text1={@reflashing_twrp=Flashing TWRP...}</action>
+						<action function="set">tw_complete_text1={@reflash_twrp_complete=Done Flashing TWRP}</action>
+						<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+						<action function="page">confirm_action</action>
+						</actions>
+				</listitem>
 				<listitem name="{@install_kernel=Install Kernel}">
 					<conditions>
 						<condition var1="tw_has_boot_slots" var2="1"/>
@@ -3704,6 +3723,7 @@
 					<conditions>
 						<condition var1="tw_has_boot_slots" var2="1"/>
 						<condition var1="tw_has_repack_tools" var2="1"/>
+						<condition var1="tw_uses_initramfs" var2="1"/>
 					</conditions>
 					<actions>
 						<action function="set">tw_back=advanced</action>
@@ -4681,6 +4701,11 @@
 				<action function="page">decrypt_pattern</action>
 			</action>
 
+			<action>
+				<condition var1="tw_crypto_pwtype" var2="3"/>
+				<action function="page">decrypt_pin</action>
+			</action>
+
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
 				<text>{@mount_hdr=Mount}</text>
@@ -4729,10 +4754,7 @@
 			<button style="main_button_half_height">
 				<placement x="%indent%" y="%row10_y%"/>
 				<text>{@cancel_btn=Cancel}</text>
-				<actions>
-					<action function="set">tw_page_done=1</action>
-					<action function="page">main</action>
-				</actions>
+				<action function="page">canceldecrypt</action>
 			</button>
 
 			<button style="main_button_half_height">
@@ -4810,10 +4832,7 @@
 			<button style="main_button_half_height">
 				<placement x="%indent%" y="%row21a_y%"/>
 				<text>{@cancel_btn=Cancel}</text>
-				<actions>
-					<action function="set">tw_page_done=1</action>
-					<action function="page">main</action>
-				</actions>
+				<action function="page">canceldecrypt</action>
 			</button>
 
 			<button style="main_button_half_height">
@@ -4821,6 +4840,69 @@
 				<text>{@sel_lang_btn=Select Language}</text>
 				<action function="overlay">select_language</action>
 			</button>
+		</page>
+
+		<page name="decrypt_pin">
+			<template name="page"/>
+
+			<text style="text_l">
+				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<text>{@mount_hdr=Mount}</text>
+			</text>
+
+			<text style="text_m">
+				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<text>{@decrypt_data_hdr=Decrypt Data}</text>
+			</text>
+
+			<text style="text_m_accent">
+				<condition var1="tw_is_fbe" op="!=" var2="1"/>
+				<placement x="%center_x%" y="%row2_y%" placement="5"/>
+				<text>{@decrypt_data_enter_pass=Enter PIN:}</text>
+			</text>
+
+			<text style="text_m_accent">
+				<condition var1="tw_is_fbe" var2="1"/>
+				<placement x="%center_x%" y="%row2_y%" placement="5"/>
+				<text>{@decrypt_data_enter_pass_fbe=Enter PIN for User [%tw_crypto_user_id%]}</text>
+			</text>
+
+			<input>
+				<placement x="%indent%" y="%row3_input_y%" w="%content_width%" h="%input_height%"/>
+				<text>%tw_crypto_display%</text>
+				<data name="tw_crypto_password" mask="*" maskvariable="tw_crypto_display"/>
+				<restrict minlen="1" maxlen="254"/>
+				<action function="page">trydecrypt</action>
+			</input>
+
+			<fill color="%accent_color%">
+				<placement x="%indent%" y="row4a_y" w="%content_width%" h="input_line_width" placement="1"/>
+			</fill>
+
+			<fill color="%text_fail_color%">
+				<condition var1="tw_password_fail" var2="1"/>
+				<placement x="%indent%" y="row4a_y" w="%content_width%" h="input_line_width" placement="1"/>
+			</fill>
+
+			<text style="text_m_fail">
+				<condition var1="tw_password_fail" var2="1"/>
+				<placement x="%indent%" y="%row5_y%"/>
+				<text>{@decrypt_data_failed=PIN failed, please try again!}</text>
+			</text>
+
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row10_y%"/>
+				<text>{@cancel_btn=Cancel}</text>
+				<action function="page">canceldecrypt</action>
+			</button>
+
+			<button style="main_button_half_height">
+				<placement x="%center_x%" y="%row10_y%"/>
+				<text>{@sel_lang_btn=Select Language}</text>
+				<action function="overlay">select_language</action>
+			</button>
+
+			<template name="keyboardnum"/>
 		</page>
 
 		<page name="trydecrypt">
@@ -4859,6 +4941,38 @@
 				<conditions>
 					<condition var1="tw_operation_state" var2="1"/>
 					<condition var1="tw_operation_status" op="=" var2="0"/>
+				</conditions>
+				<actions>
+					<action function="set">tw_page_done=1</action>
+					<action function="page">main</action>
+				</actions>
+			</action>
+		</page>
+
+		<page name="canceldecrypt">
+			<template name="page"/>
+
+			<text style="text_l">
+				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<text>{@cancel_btn=Cancel}</text>
+			</text>
+
+			<text style="text_m">
+				<placement x="%col1_x_header%" y="%row4_header_y%"/>
+				<text>{@refresh_sizes_btn=Refresh Sizes}</text>
+			</text>
+
+			<template name="console"/>
+
+			<template name="progress_bar"/>
+
+			<action>
+				<action function="refreshsizes"/>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="tw_operation_state" var2="1"/>
 				</conditions>
 				<actions>
 					<action function="set">tw_page_done=1</action>
