@@ -87,11 +87,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 # Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+		    camera.disable_treble=true \
+		    camera2.portability.force_api=1 \
+		    debug.camcorder.disablemeta=true
+
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libcamera_shim \
-    camera.msm8916
+    camera.msm8916 \
+		Camera2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
@@ -183,10 +190,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0-java
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 
 PRODUCT_PACKAGES += \
     libhidltransport \
@@ -245,10 +250,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
 
-#Matlog
-PRODUCT_PACKAGES += \
-   MatLog
-
 # Misc
 PRODUCT_PACKAGES += \
     curl \
@@ -257,8 +258,12 @@ PRODUCT_PACKAGES += \
     tcpdump
 
 # Native libraries
-#PRODUCT_COPY_FILES += \
-#   $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Protobuf
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -345,6 +350,10 @@ PRODUCT_COPY_FILES += \
 # Sensor HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
+
+# Shims
+PRODUCT_PACKAGES += \
+		    libprocessgroup
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

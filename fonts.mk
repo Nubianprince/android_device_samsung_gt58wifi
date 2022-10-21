@@ -1,11 +1,19 @@
 PRODUCT_PACKAGES += \
     AUTHENTIC.ttf \
-    TwCenMTCondensed.ttf
+    TwCenMTCondensed.ttf \
+		SulphurPoint-Bold.ttf \
+    SulphurPoint-Light.ttf \
+    SulphurPoint-Regular.ttf \
+    Urbanist-VariableFont.ttf \
+		nk57-monospace-cd-rg.ttf
 
 # Customization overlays
 PRODUCT_PACKAGES += \
    FontAuthenticOverlay \
-   FontTwCenMtOverlay
+   FontTwCenMtOverlay \
+	 FontSulphurPointOverlay \
+	 FontUrbanistOverlay \
+	 FontNK57Overlay
 
 # Register fonts
 PRODUCT_COPY_FILES += \

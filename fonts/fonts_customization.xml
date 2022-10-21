@@ -42,4 +42,38 @@
     </family>
     <alias name="twcenmt-medium" to="twcenmt" weight="500" />
     <alias name="twcenmt-bold" to="twcenmt" weight="700" />
+    
+         <family customizationType="new-named-family" name="urbanist">
+        <font weight="400" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="400" style="italic">Urbanist-VariableFont.ttf</font>
+        <font weight="500" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="500" style="italic">Urbanist-VariableFont.ttf</font>
+        <font weight="700" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="700" style="italic">Urbanist-VariableFont.ttf</font>
+    </family>
+    <alias name="urbanist-medium" to="urbanist" weight="500" />
+    <alias name="urbanist-bold" to="urbanist" weight="700" />
+    
+         <family customizationType="new-named-family" name="sulphurpoint">
+        <font weight="400" style="normal">SulphurPoint-Regular.ttf</font>
+        <font weight="400" style="italic">SulphurPoint-Regular.ttf</font>
+        <font weight="500" style="normal">SulphurPoint-Light.ttf</font>
+        <font weight="500" style="italic">SulphurPoint-Light.ttf</font>
+        <font weight="700" style="normal">SulphurPoint-Bold.ttf</font>
+        <font weight="700" style="italic">SulphurPoint-Bold.ttf</font>
+    </family>
+    <alias name="sulphurpoint-medium" to="sulphurpoint" weight="500" />
+    <alias name="sulphurpoint-bold" to="sulphurpoint" weight="700" />
+    
+        <family customizationType="new-named-family" name="nk57">
+        <font weight="400" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="400" style="italic">nk57-monospace-cd-rg.ttf</font>
+        <font weight="500" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="500" style="italic">nk57-monospace-cd-rg.ttf</font>
+        <font weight="700" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="700" style="italic">nk57-monospace-cd-rg.ttf</font>
+    </family>
+    <alias name="nk57-medium" to="nk57" weight="500" />
+    <alias name="nk57-bold" to="nk57" weight="700" />
+    
 </fonts-modification>

@@ -1,3 +1,4 @@
+# android_device_samsung_gt58wifi
 
 ## Device tree for Samsung Galaxy Tab (A) SM-T350 [gt58wifi]
 
@@ -16,3 +17,4 @@ Display | 1024 x 768, 8.0" (246.38mm)
 Rear Camera  | 5.0 MP
 Front Camera | 2.0 MP
 
+# device_samsung_gt58wifi - Work in progress
