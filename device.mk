@@ -180,13 +180,11 @@ PRODUCT_PACKAGES += \
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
+		android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
 # HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0-java
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
     libhidltransport \
@@ -257,8 +255,13 @@ PRODUCT_PACKAGES += \
     tcpdump
 
 # Native libraries
-#PRODUCT_COPY_FILES += \
-#   $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+
+# OEM Unlock
+PRODUCT_PROPERTY_OVERRIDES += \
+	     ro.oem_unlock_supported=0
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -300,6 +303,10 @@ PRODUCT_COPY_FILES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
+
+# Protobuf
+PRODUCT_COPY_FILES += \
+		    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so
 
 # Properties
 include $(LOCAL_PATH)/prop.mk
@@ -366,6 +373,10 @@ PRODUCT_COPY_FILES += \
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+# Vibrator
+PRODUCT_PACKAGES += \
+     android.hardware.vibrator@1.0-impl
 
 # Wifi configuration files
 PRODUCT_COPY_FILES += \

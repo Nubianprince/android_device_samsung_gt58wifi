@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fonts-modification version="1">
+    <family customizationType="new-named-family" name="lato">
+        <font weight="400" style="normal">Lato-Regular.ttf</font>
+        <font weight="400" style="italic">Lato-Italic.ttf</font>
+        <font weight="500" style="normal">Lato-Medium.ttf</font>
+        <font weight="500" style="italic">Lato-MediumItalic.ttf</font>
+        <font weight="700" style="normal">Lato-Bold.ttf</font>
+        <font weight="700" style="italic">Lato-BoldItalic.ttf</font>
+    </family>
+    <alias name="lato-medium" to="lato" weight="500" />
+    <alias name="lato-bold" to="lato" weight="700" />
+
+    <family customizationType="new-named-family" name="rubik">
+        <font weight="400" style="normal">Rubik-Regular.ttf</font>
+        <font weight="400" style="italic">Rubik-Italic.ttf</font>
+        <font weight="500" style="normal">Rubik-Medium.ttf</font>
+        <font weight="500" style="italic">Rubik-MediumItalic.ttf</font>
+        <font weight="700" style="normal">Rubik-Bold.ttf</font>
+        <font weight="700" style="italic">Rubik-BoldItalic.ttf</font>
+    </family>
+    <alias name="rubik-medium" to="rubik" weight="500" />
+    <alias name="rubik-bold" to="rubik" weight="700" />
+         <family customizationType="new-named-family" name="authentic">
+        <font weight="400" style="normal">AUTHENTIC.ttf</font>
+        <font weight="400" style="italic">AUTHENTIC.ttf</font>
+        <font weight="500" style="normal">AUTHENTIC.ttf</font>
+        <font weight="500" style="italic">AUTHENTIC.ttf</font>
+        <font weight="700" style="normal">AUTHENTIC.ttf</font>
+        <font weight="700" style="italic">AUTHENTIC.ttf</font>
+    </family>
+    <alias name="authentic-medium" to="authentic" weight="500" />
+    <alias name="authentic-bold" to="authentic" weight="700" />
+    
+     <family customizationType="new-named-family" name="twcenmt">
+        <font weight="400" style="normal">TwCenMTCondensed.ttf</font>
+        <font weight="400" style="italic">TwCenMTCondensed.ttf</font>
+        <font weight="500" style="normal">TwCenMTCondensed.ttf</font>
+        <font weight="500" style="italic">TwCenMTCondensed.ttf</font>
+        <font weight="700" style="normal">TwCenMTCondensed.ttf</font>
+        <font weight="700" style="italic">TwCenMTCondensed.ttf</font>
+    </family>
+    <alias name="twcenmt-medium" to="twcenmt" weight="500" />
+    <alias name="twcenmt-bold" to="twcenmt" weight="700" />
+    
+    <family customizationType="new-named-family" name="urbanist">
+        <font weight="400" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="400" style="italic">Urbanist-VariableFont.ttf</font>
+        <font weight="500" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="500" style="italic">Urbanist-VariableFont.ttf</font>
+        <font weight="700" style="normal">Urbanist-VariableFont.ttf</font>
+        <font weight="700" style="italic">Urbanist-VariableFont.ttf</font>
+    </family>
+    <alias name="urbanist-medium" to="urbanist" weight="500" />
+    <alias name="urbanist-bold" to="urbanist" weight="700" />
+    
+     <family customizationType="new-named-family" name="sulphurpoint">
+        <font weight="400" style="normal">SulphurPoint-Regular.ttf</font>
+        <font weight="400" style="italic">SulphurPoint-Regular.ttf</font>
+        <font weight="500" style="normal">SulphurPoint-Light.ttf</font>
+        <font weight="500" style="italic">SulphurPoint-Light.ttf</font>
+        <font weight="700" style="normal">SulphurPoint-Bold.ttf</font>
+        <font weight="700" style="italic">SulphurPoint-Bold.ttf</font>
+    </family>
+    <alias name="sulphurpoint-medium" to="sulphurpoint" weight="500" />
+    <alias name="sulphurpoint-bold" to="sulphurpoint" weight="700" />
+    
+     <family customizationType="new-named-family" name="nk57">
+        <font weight="400" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="400" style="italic">nk57-monospace-cd-rg.ttf</font>
+        <font weight="500" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="500" style="italic">nk57-monospace-cd-rg.ttf</font>
+        <font weight="700" style="normal">nk57-monospace-cd-rg.ttf</font>
+        <font weight="700" style="italic">nk57-monospace-cd-rg.ttf</font>
+    </family>
+    <alias name="nk57-medium" to="nk57" weight="500" />
+    <alias name="nk57-bold" to="nk57" weight="700" />
+    
+     <family customizationType="new-named-family" name="harmoniasans">
+        <font weight="400" style="normal">HarmoniaSansCondensed.ttf</font>
+        <font weight="400" style="italic">HarmoniaSansCondensed.ttf</font>
+        <font weight="500" style="normal">HarmoniaSansCondensed.ttf</font>
+        <font weight="500" style="italic">HarmoniaSansCondensed.ttf</font>
+        <font weight="700" style="normal">HarmoniaSansCondensed.ttf</font>
+        <font weight="700" style="italic">HarmoniaSansCondensed.ttf</font>
+    </family>
+    <alias name="harmoniasans-medium" to="harmoniasans" weight="500" />
+    <alias name="harmoniasans-bold" to="harmoniasans" weight="700" />
+    
+</fonts-modification>
